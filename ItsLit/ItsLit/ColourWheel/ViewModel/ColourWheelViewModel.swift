@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import swift_vibrant
 
 protocol ColourWheelViewModelOutput {
     func encode(leds: LEDS) -> String
@@ -42,5 +43,14 @@ class ColourWheelViewModel: ColourWheelViewModelOutput {
         let ledsJson = encode(leds: fill(rgb: rgbColour))
         print(ledsJson)
         return ledsJson
+    }
+    func getGen(){
+        let image = UIImage(named: "paletatest")
+
+        // Calling from a background thread
+        Vibrant.from(image ?? UIImage()).getPalette({ palette in
+            print(palette.Muted?.uiColor)
+        })
+    
     }
 }

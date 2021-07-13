@@ -11,7 +11,7 @@ import SwiftUI
 struct ItsLitApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ColourWheelView(viewModel: ColourWheelViewModel())
         }
     }
 }
