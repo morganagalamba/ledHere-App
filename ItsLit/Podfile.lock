@@ -1,0 +1,16 @@
+PODS:
+  - swift-vibrant (1.0.0)
+
+DEPENDENCIES:
+  - swift-vibrant
+
+SPEC REPOS:
+  trunk:
+    - swift-vibrant
+
+SPEC CHECKSUMS:
+  swift-vibrant: 3def73c5c281db74f420ec386590d9c1c5b0995c
+
+PODFILE CHECKSUM: 19fa0ce62da8754fa70e722905c01525b3d71645
+
+COCOAPODS: 1.10.1
