@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E478B2526989691005F54EA /* LEDS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E478B2426989691005F54EA /* LEDS.swift */; };
+		0E478B2B26989CBE005F54EA /* ColourWheelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E478B2A26989CBE005F54EA /* ColourWheelViewModel.swift */; };
+		0E48E6FA269650AF0009ADE4 /* CIHueSaturationValueGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48E6F6269650AF0009ADE4 /* CIHueSaturationValueGradientView.swift */; };
+		0E48E6FB269650AF0009ADE4 /* CustomSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48E6F7269650AF0009ADE4 /* CustomSlider.swift */; };
+		0E48E6FC269650AF0009ADE4 /* ColourWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48E6F8269650AF0009ADE4 /* ColourWheelView.swift */; };
+		0E48E6FD269650AF0009ADE4 /* ColourWheel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48E6F9269650AF0009ADE4 /* ColourWheel.swift */; };
+		0E48E7012696510B0009ADE4 /* ColourStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48E6FF2696510B0009ADE4 /* ColourStructs.swift */; };
+		0E48E7022696510B0009ADE4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48E7002696510B0009ADE4 /* Helpers.swift */; };
 		D7F079462694F79C00ED8553 /* ItsLitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F079452694F79C00ED8553 /* ItsLitApp.swift */; };
 		D7F079482694F79C00ED8553 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F079472694F79C00ED8553 /* ContentView.swift */; };
 		D7F0794A2694F79E00ED8553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F079492694F79E00ED8553 /* Assets.xcassets */; };
@@ -33,6 +41,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0E478B2426989691005F54EA /* LEDS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LEDS.swift; sourceTree = "<group>"; };
+		0E478B2A26989CBE005F54EA /* ColourWheelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourWheelViewModel.swift; sourceTree = "<group>"; };
+		0E48E6F6269650AF0009ADE4 /* CIHueSaturationValueGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIHueSaturationValueGradientView.swift; sourceTree = "<group>"; };
+		0E48E6F7269650AF0009ADE4 /* CustomSlider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSlider.swift; sourceTree = "<group>"; };
+		0E48E6F8269650AF0009ADE4 /* ColourWheelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourWheelView.swift; sourceTree = "<group>"; };
+		0E48E6F9269650AF0009ADE4 /* ColourWheel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourWheel.swift; sourceTree = "<group>"; };
+		0E48E6FF2696510B0009ADE4 /* ColourStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourStructs.swift; sourceTree = "<group>"; };
+		0E48E7002696510B0009ADE4 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		D7F079422694F79C00ED8553 /* ItsLit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItsLit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F079452694F79C00ED8553 /* ItsLitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItsLitApp.swift; sourceTree = "<group>"; };
 		D7F079472694F79C00ED8553 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +88,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E478B2626989C23005F54EA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0E48E6F6269650AF0009ADE4 /* CIHueSaturationValueGradientView.swift */,
+				0E48E6F9269650AF0009ADE4 /* ColourWheel.swift */,
+				0E48E6F7269650AF0009ADE4 /* CustomSlider.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0E478B2826989C3C005F54EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E48E6F8269650AF0009ADE4 /* ColourWheelView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0E478B2926989C46005F54EA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0E478B2A26989CBE005F54EA /* ColourWheelViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0E48E6F5269650950009ADE4 /* ColourWheel */ = {
+			isa = PBXGroup;
+			children = (
+				0E478B2826989C3C005F54EA /* View */,
+				0E478B2926989C46005F54EA /* ViewModel */,
+				0E478B2626989C23005F54EA /* Components */,
+			);
+			path = ColourWheel;
+			sourceTree = "<group>";
+		};
+		0E48E6FE269651000009ADE4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0E48E6FF2696510B0009ADE4 /* ColourStructs.swift */,
+				0E48E7002696510B0009ADE4 /* Helpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		D7F079392694F79C00ED8553 = {
 			isa = PBXGroup;
 			children = (
@@ -96,9 +157,12 @@
 			isa = PBXGroup;
 			children = (
 				D7F079452694F79C00ED8553 /* ItsLitApp.swift */,
+				0E478B2426989691005F54EA /* LEDS.swift */,
 				D7F079472694F79C00ED8553 /* ContentView.swift */,
 				D7F079492694F79E00ED8553 /* Assets.xcassets */,
+				0E48E6FE269651000009ADE4 /* Helpers */,
 				D7F0794E2694F79E00ED8553 /* Info.plist */,
+				0E48E6F5269650950009ADE4 /* ColourWheel */,
 				D7F0794B2694F79E00ED8553 /* Preview Content */,
 			);
 			path = ItsLit;
@@ -259,8 +323,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E48E7012696510B0009ADE4 /* ColourStructs.swift in Sources */,
+				0E48E6FA269650AF0009ADE4 /* CIHueSaturationValueGradientView.swift in Sources */,
+				0E478B2B26989CBE005F54EA /* ColourWheelViewModel.swift in Sources */,
+				0E48E6FC269650AF0009ADE4 /* ColourWheelView.swift in Sources */,
+				0E48E7022696510B0009ADE4 /* Helpers.swift in Sources */,
 				D7F079482694F79C00ED8553 /* ContentView.swift in Sources */,
+				0E48E6FD269650AF0009ADE4 /* ColourWheel.swift in Sources */,
+				0E478B2526989691005F54EA /* LEDS.swift in Sources */,
 				D7F079462694F79C00ED8553 /* ItsLitApp.swift in Sources */,
+				0E48E6FB269650AF0009ADE4 /* CustomSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

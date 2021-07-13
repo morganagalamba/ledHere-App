@@ -1,5 +1,5 @@
 //
-//  ColorWheel.swift
+//  ColourWheel.swift
 //  Colour Wheel
 //
 //  Created by Christian P on 9/6/20.

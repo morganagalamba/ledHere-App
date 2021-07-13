@@ -9,7 +9,9 @@
 import SwiftUI
 
 /// The final view that presents everything.
-struct ColorView: View {
+struct ColourWheelView: View {
+    
+    var viewModel: ColourWheelViewModel
     
     /// Source of truth of the colour that will be presented as well as controlled with the colour wheel.
     @State var rgbColour = RGB(r: 0, g: 1, b: 1)
@@ -26,6 +28,11 @@ struct ColorView: View {
             CustomSlider(rgbColour: $rgbColour, value: $brightness, range: 0.001...1)
                 .padding()
             
+            Button(action: {
+                viewModel.send(rgbColour: rgbColour)
+            }, label: {
+                Text("SEND")
+            })
             /// If you don't want a brightness/value slider then remove it and use this instead to show the current colour.
 //            ColourShowView(rgbColour: $rgbColour)
         }
@@ -34,9 +41,9 @@ struct ColorView: View {
 
 struct FinalView_Previews: PreviewProvider {
     static var previews: some View {
-        ColorView()
+        ColourWheelView(viewModel: ColourWheelViewModel())
 //            .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch)"))
-            .previewLayout(.fixed(width: 2732, height: 2048))
+//            .previewLayout(.fixed(width: 2732, height: 2048))
     }
 }
 
