@@ -1,0 +1,6 @@
+framework module Pods_ItsLitTests {
+  umbrella header "Pods-ItsLitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
