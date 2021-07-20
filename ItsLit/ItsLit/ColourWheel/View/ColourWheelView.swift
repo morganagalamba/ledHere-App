@@ -46,7 +46,7 @@ struct ColourWheelView: View {
                     .padding()
                 
                 ZStack {
-                    Text("\(rgbColour.r)")
+                    Text("\(rgbColour.g)")
                 }.padding()
             }
             
@@ -55,7 +55,7 @@ struct ColourWheelView: View {
                     .padding()
                 
                 ZStack {
-                    Text("\(rgbColour.r)")
+                    Text("\(rgbColour.b)")
                 }.padding()
             }
             
