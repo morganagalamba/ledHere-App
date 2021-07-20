@@ -21,6 +21,7 @@
 		D7D527BA26A7434E0053918E /* CreatePaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D527B926A7434E0053918E /* CreatePaletteView.swift */; };
 		D7D527BC26A74E290053918E /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D527BB26A74E290053918E /* ProjectView.swift */; };
 		D7D527BE26A7512F0053918E /* SimulationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D527BD26A7512F0053918E /* SimulationView.swift */; };
+		D7D527C026A759E60053918E /* ControlColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D527BF26A759E60053918E /* ControlColorView.swift */; };
 		D7F079462694F79C00ED8553 /* ItsLitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F079452694F79C00ED8553 /* ItsLitApp.swift */; };
 		D7F079482694F79C00ED8553 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F079472694F79C00ED8553 /* ContentView.swift */; };
 		D7F0794A2694F79E00ED8553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F079492694F79E00ED8553 /* Assets.xcassets */; };
@@ -69,6 +70,7 @@
 		D7D527B926A7434E0053918E /* CreatePaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePaletteView.swift; sourceTree = "<group>"; };
 		D7D527BB26A74E290053918E /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
 		D7D527BD26A7512F0053918E /* SimulationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationView.swift; sourceTree = "<group>"; };
+		D7D527BF26A759E60053918E /* ControlColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlColorView.swift; sourceTree = "<group>"; };
 		D7F079422694F79C00ED8553 /* ItsLit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItsLit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F079452694F79C00ED8553 /* ItsLitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItsLitApp.swift; sourceTree = "<group>"; };
 		D7F079472694F79C00ED8553 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				0E478B2426989691005F54EA /* LEDS.swift */,
 				D7F079472694F79C00ED8553 /* ContentView.swift */,
 				D7D527BB26A74E290053918E /* ProjectView.swift */,
+				D7D527BF26A759E60053918E /* ControlColorView.swift */,
 				D7D527BD26A7512F0053918E /* SimulationView.swift */,
 				D7D527B926A7434E0053918E /* CreatePaletteView.swift */,
 				D7F079492694F79E00ED8553 /* Assets.xcassets */,
@@ -488,6 +491,7 @@
 				0E48E6FA269650AF0009ADE4 /* CIHueSaturationValueGradientView.swift in Sources */,
 				0E478B2B26989CBE005F54EA /* ColourWheelViewModel.swift in Sources */,
 				D7D527BA26A7434E0053918E /* CreatePaletteView.swift in Sources */,
+				D7D527C026A759E60053918E /* ControlColorView.swift in Sources */,
 				0E48E6FC269650AF0009ADE4 /* ColourWheelView.swift in Sources */,
 				0E48E7022696510B0009ADE4 /* Helpers.swift in Sources */,
 				D7F079482694F79C00ED8553 /* ContentView.swift in Sources */,
