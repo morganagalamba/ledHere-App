@@ -14,18 +14,35 @@ struct ControlColorView: View {
                     .padding()
                     .font(.title2)
                 HStack{
-                    Circle()
-                        .fill(Color.blue)
-                        .frame(width: 50, height: 50)
-                    Circle()
-                        .fill(Color.green)
-                        .frame(width: 50, height: 50)
-                    Circle()
-                        .fill(Color.pink)
-                        .frame(width: 50, height: 50)
-                    Circle()
-                        .fill(Color.purple)
-                        .frame(width: 50, height: 50)
+                    Button(action: {
+                        
+                    }) {
+                        Circle()
+                            .fill(Color.blue)
+                            .frame(width: 50, height: 50)
+                    }
+                    Button(action: {
+                        
+                    }) {
+                        Circle()
+                            .fill(Color.green)
+                            .frame(width: 50, height: 50)
+                    }
+                    Button(action: {
+                        
+                    }) {
+                        Circle()
+                            .fill(Color.pink)
+                            .frame(width: 50, height: 50)
+                    }
+                    Button(action: {
+                        
+                    }) {
+                        Circle()
+                            .fill(Color.purple)
+                            .frame(width: 50, height: 50)
+                    }
+                    
                     Button(action: {
                         
                     }) {

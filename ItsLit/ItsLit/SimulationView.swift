@@ -10,53 +10,71 @@ import SwiftUI
 struct SimulationView: View {
     var body: some View {
         VStack{
-            VStack{
-                Circle()
-                    .fill(Color.purple)
-                    .frame(width: 20, height:20)
-                Circle()
-                    .fill(Color.purple)
-                    .frame(width: 20, height: 20)
-                Circle()
-                    .fill(Color.purple)
-                    .frame(width: 20, height: 20)
-            }
-            HStack{
-                HStack{
+            Button(action: {
+                
+            }) {
+                VStack{
                     Circle()
-                        .fill(Color.green)
+                        .fill(Color.purple)
+                        .frame(width: 20, height:20)
+                    Circle()
+                        .fill(Color.purple)
                         .frame(width: 20, height: 20)
                     Circle()
-                        .fill(Color.green)
-                        .frame(width: 20, height: 20)
-                    Circle()
-                        .fill(Color.green)
-                        .frame(width: 20, height: 20)
-                }
-                HStack{
-                    Circle()
-                        .fill(Color.blue)
-                        .frame(width: 20, height: 20)
-                    Circle()
-                        .fill(Color.blue)
-                        .frame(width: 20, height: 20)
-                    Circle()
-                        .fill(Color.blue)
+                        .fill(Color.purple)
                         .frame(width: 20, height: 20)
                 }
             }
             
-            VStack{
-                Circle()
-                    .fill(Color.pink)
-                    .frame(width: 20, height: 20)
-                Circle()
-                    .fill(Color.pink)
-                    .frame(width: 20, height: 20)
-                Circle()
-                    .fill(Color.pink)
-                    .frame(width: 20, height: 20)
+            HStack{
+                Button(action: {
+                    
+                }) {
+                    HStack{
+                        Circle()
+                            .fill(Color.green)
+                            .frame(width: 20, height: 20)
+                        Circle()
+                            .fill(Color.green)
+                            .frame(width: 20, height: 20)
+                        Circle()
+                            .fill(Color.green)
+                            .frame(width: 20, height: 20)
+                    }
+                }
+                Button(action: {
+                    
+                }) {
+                    HStack{
+                        Circle()
+                            .fill(Color.blue)
+                            .frame(width: 20, height: 20)
+                        Circle()
+                            .fill(Color.blue)
+                            .frame(width: 20, height: 20)
+                        Circle()
+                            .fill(Color.blue)
+                            .frame(width: 20, height: 20)
+                    }
+                }
+               
             }
+            Button(action: {
+                
+            }) {
+                VStack{
+                    Circle()
+                        .fill(Color.pink)
+                        .frame(width: 20, height: 20)
+                    Circle()
+                        .fill(Color.pink)
+                        .frame(width: 20, height: 20)
+                    Circle()
+                        .fill(Color.pink)
+                        .frame(width: 20, height: 20)
+                }
+            }
+            
             
             
             Button(action: {
