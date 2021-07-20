@@ -18,6 +18,7 @@ struct CreatePaletteView: View {
                 Spacer()
             }
                 DragView(model: model)
+                    .padding()
                 VStack{
                     Text("Paleta de cores")
                         .padding()
@@ -31,18 +32,24 @@ struct CreatePaletteView: View {
                         }else{
                             ForEach(0..<4, id: \.self) { row in
                                 Circle()
+                                    .frame(width: 50, height: 50)
                                     .foregroundColor(Color(red: 12, green: 12, blue: 12, opacity: 0))
                                 }
                         }
-                    }.padding()
+                    }//.padding()
                 }.background(Color.gray)
-                .cornerRadius(50.0)
+                .cornerRadius(25.0)
                 .padding()
             Button(action: {
                 
             }) {
                 Text("Salvar paleta")
-                    .padding(10.0)
+                    .padding()
+                    .frame(width: 150, height: 50)
+                    .foregroundColor(.white)
+                    .background(Color.accentColor)
+                    .cornerRadius(8)
+                
             }
         }.padding()
     }

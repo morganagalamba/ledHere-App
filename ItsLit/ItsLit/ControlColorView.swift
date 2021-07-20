@@ -66,7 +66,7 @@ struct ControlColorView: View {
                             .cornerRadius(8)
 
                 }
-            }
+            }.padding()
 
     }
 }

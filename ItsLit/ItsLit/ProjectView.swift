@@ -11,10 +11,25 @@ struct ProjectView: View {
     var body: some View {
         HStack{
             SimulationView()
-            ControlColorView()
-                .background(Color.gray)
-                .cornerRadius(50.0)
-                .padding()
+            VStack{
+                ControlColorView()
+                    .background(Color.gray)
+                    .cornerRadius(50.0)
+                EffectsView()
+                    .background(Color.gray)
+                    .cornerRadius(25.0)
+                Button(action: {
+                    
+                }) {
+                        Text("Enviar")
+                            .frame(width: 100, height: 50)
+                            .foregroundColor(.white)
+                            .background(Color.accentColor)
+                            .cornerRadius(8)
+
+                }
+            }
+            
         }
     }
 }
