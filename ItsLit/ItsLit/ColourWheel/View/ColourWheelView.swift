@@ -25,26 +25,39 @@ struct ColourWheelView: View {
                 .padding()
             
             /// The slider shows the selected colour and allows control of the brightness/value. Cannot have value at 0 otherwise we lose the RGB value.
-            CustomSlider(rgbColour: $rgbColour, value: $brightness, range: 0.001...1)
+            HStack{
+            CustomSlider(rgbColour: $rgbColour, value: $brightness, range: (0...1))
                 .padding()
-            
+                Text("\(brightness)").padding()
+            }
             
             HStack {
-                CustomSlider(rgbColour: $rgbColour, value: $rgbColour.r, range: 0.001...1)
+                CustomSlider(rgbColour: $rgbColour, value: $rgbColour.r, range: 0...1)
                     .padding()
                 
                 ZStack {
-                    Rectangle()
-                    Text("/rgbColour.r")
-                }
+                    Text("\(rgbColour.r)")
+                }.padding()
             }
             
             
-            CustomSlider(rgbColour: $rgbColour, value: $rgbColour.g, range: 0.001...1)
-                .padding()
+            HStack {
+                CustomSlider(rgbColour: $rgbColour, value: $rgbColour.g, range: 0...1)
+                    .padding()
+                
+                ZStack {
+                    Text("\(rgbColour.r)")
+                }.padding()
+            }
             
-            CustomSlider(rgbColour: $rgbColour, value: $rgbColour.b, range: 0.001...1)
-                .padding()
+            HStack {
+                CustomSlider(rgbColour: $rgbColour, value: $rgbColour.b, range: 0.001...1)
+                    .padding()
+                
+                ZStack {
+                    Text("\(rgbColour.r)")
+                }.padding()
+            }
             
             Button(action: {
                 viewModel.send(rgbColour: rgbColour)
