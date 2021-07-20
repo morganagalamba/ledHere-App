@@ -28,13 +28,31 @@ struct ColourWheelView: View {
             CustomSlider(rgbColour: $rgbColour, value: $brightness, range: 0.001...1)
                 .padding()
             
+            
+            HStack {
+                CustomSlider(rgbColour: $rgbColour, value: $rgbColour.r, range: 0.001...1)
+                    .padding()
+                
+                ZStack {
+                    Rectangle()
+                    Text("/rgbColour.r")
+                }
+            }
+            
+            
+            CustomSlider(rgbColour: $rgbColour, value: $rgbColour.g, range: 0.001...1)
+                .padding()
+            
+            CustomSlider(rgbColour: $rgbColour, value: $rgbColour.b, range: 0.001...1)
+                .padding()
+            
             Button(action: {
                 viewModel.send(rgbColour: rgbColour)
             }, label: {
                 Text("SEND")
             })
             /// If you don't want a brightness/value slider then remove it and use this instead to show the current colour.
-//            ColourShowView(rgbColour: $rgbColour)
+            //            ColourShowView(rgbColour: $rgbColour)
         }
     }
 }
@@ -42,8 +60,8 @@ struct ColourWheelView: View {
 struct FinalView_Previews: PreviewProvider {
     static var previews: some View {
         ColourWheelView(viewModel: ColourWheelViewModel())
-//            .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch)"))
-//            .previewLayout(.fixed(width: 2732, height: 2048))
+        //            .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch)"))
+        //            .previewLayout(.fixed(width: 2732, height: 2048))
     }
 }
 
