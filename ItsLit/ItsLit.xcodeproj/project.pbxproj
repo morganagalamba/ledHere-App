@@ -18,6 +18,7 @@
 		75D4336F73D3C55C0E368DC5 /* Pods_ItsLitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7DB310240E32DEEB18FEB2 /* Pods_ItsLitTests.framework */; };
 		7923108EF1E37CA256A32713 /* Pods_ItsLit_ItsLitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C408B2ED46E5CBDA9BE163B /* Pods_ItsLit_ItsLitUITests.framework */; };
 		D72DF7D9269E0CB4008E19AF /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DF7D8269E0CB4008E19AF /* DragView.swift */; };
+		D7D527BA26A7434E0053918E /* CreatePaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D527B926A7434E0053918E /* CreatePaletteView.swift */; };
 		D7F079462694F79C00ED8553 /* ItsLitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F079452694F79C00ED8553 /* ItsLitApp.swift */; };
 		D7F079482694F79C00ED8553 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F079472694F79C00ED8553 /* ContentView.swift */; };
 		D7F0794A2694F79E00ED8553 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7F079492694F79E00ED8553 /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		AF7DB310240E32DEEB18FEB2 /* Pods_ItsLitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ItsLitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58475638338315E6F12465E /* Pods-ItsLit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItsLit.release.xcconfig"; path = "Target Support Files/Pods-ItsLit/Pods-ItsLit.release.xcconfig"; sourceTree = "<group>"; };
 		D72DF7D8269E0CB4008E19AF /* DragView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
+		D7D527B926A7434E0053918E /* CreatePaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePaletteView.swift; sourceTree = "<group>"; };
 		D7F079422694F79C00ED8553 /* ItsLit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItsLit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F079452694F79C00ED8553 /* ItsLitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItsLitApp.swift; sourceTree = "<group>"; };
 		D7F079472694F79C00ED8553 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				D7F0794E2694F79E00ED8553 /* Info.plist */,
 				0E48E6F5269650950009ADE4 /* ColourWheel */,
 				D7F0794B2694F79E00ED8553 /* Preview Content */,
+				D7D527B926A7434E0053918E /* CreatePaletteView.swift */,
 			);
 			path = ItsLit;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				0E48E7012696510B0009ADE4 /* ColourStructs.swift in Sources */,
 				0E48E6FA269650AF0009ADE4 /* CIHueSaturationValueGradientView.swift in Sources */,
 				0E478B2B26989CBE005F54EA /* ColourWheelViewModel.swift in Sources */,
+				D7D527BA26A7434E0053918E /* CreatePaletteView.swift in Sources */,
 				0E48E6FC269650AF0009ADE4 /* ColourWheelView.swift in Sources */,
 				0E48E7022696510B0009ADE4 /* Helpers.swift in Sources */,
 				D7F079482694F79C00ED8553 /* ContentView.swift in Sources */,
