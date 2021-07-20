@@ -17,6 +17,7 @@
 		0E48E7022696510B0009ADE4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48E7002696510B0009ADE4 /* Helpers.swift */; };
 		75D4336F73D3C55C0E368DC5 /* Pods_ItsLitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7DB310240E32DEEB18FEB2 /* Pods_ItsLitTests.framework */; };
 		7923108EF1E37CA256A32713 /* Pods_ItsLit_ItsLitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C408B2ED46E5CBDA9BE163B /* Pods_ItsLit_ItsLitUITests.framework */; };
+		CB5C737F26A76A20000DD8D7 /* CreatePaletteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C737E26A76A20000DD8D7 /* CreatePaletteViewModel.swift */; };
 		D72DF7D9269E0CB4008E19AF /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DF7D8269E0CB4008E19AF /* DragView.swift */; };
 		D7D527BA26A7434E0053918E /* CreatePaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D527B926A7434E0053918E /* CreatePaletteView.swift */; };
 		D7D527BC26A74E290053918E /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D527BB26A74E290053918E /* ProjectView.swift */; };
@@ -66,6 +67,7 @@
 		9E59C581F0A68B0615AD213A /* Pods-ItsLitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItsLitTests.debug.xcconfig"; path = "Target Support Files/Pods-ItsLitTests/Pods-ItsLitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF7DB310240E32DEEB18FEB2 /* Pods_ItsLitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ItsLitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B58475638338315E6F12465E /* Pods-ItsLit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItsLit.release.xcconfig"; path = "Target Support Files/Pods-ItsLit/Pods-ItsLit.release.xcconfig"; sourceTree = "<group>"; };
+		CB5C737E26A76A20000DD8D7 /* CreatePaletteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePaletteViewModel.swift; sourceTree = "<group>"; };
 		D72DF7D8269E0CB4008E19AF /* DragView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
 		D7D527B926A7434E0053918E /* CreatePaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePaletteView.swift; sourceTree = "<group>"; };
 		D7D527BB26A74E290053918E /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
@@ -181,6 +183,32 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		CB5C737B26A7698F000DD8D7 /* Palette */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C737D26A769FE000DD8D7 /* ViewModel */,
+				CB5C737C26A769F3000DD8D7 /* View */,
+			);
+			path = Palette;
+			sourceTree = "<group>";
+		};
+		CB5C737C26A769F3000DD8D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D7D527B926A7434E0053918E /* CreatePaletteView.swift */,
+				D72DF7D8269E0CB4008E19AF /* DragView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CB5C737D26A769FE000DD8D7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C737E26A76A20000DD8D7 /* CreatePaletteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		D7F079392694F79C00ED8553 = {
 			isa = PBXGroup;
 			children = (
@@ -206,14 +234,13 @@
 		D7F079442694F79C00ED8553 /* ItsLit */ = {
 			isa = PBXGroup;
 			children = (
-				D72DF7D8269E0CB4008E19AF /* DragView.swift */,
+				CB5C737B26A7698F000DD8D7 /* Palette */,
 				D7F079452694F79C00ED8553 /* ItsLitApp.swift */,
 				0E478B2426989691005F54EA /* LEDS.swift */,
 				D7F079472694F79C00ED8553 /* ContentView.swift */,
 				D7D527BB26A74E290053918E /* ProjectView.swift */,
 				D7D527BF26A759E60053918E /* ControlColorView.swift */,
 				D7D527BD26A7512F0053918E /* SimulationView.swift */,
-				D7D527B926A7434E0053918E /* CreatePaletteView.swift */,
 				D7F079492694F79E00ED8553 /* Assets.xcassets */,
 				0E48E6FE269651000009ADE4 /* Helpers */,
 				D7F0794E2694F79E00ED8553 /* Info.plist */,
@@ -492,6 +519,7 @@
 				0E478B2B26989CBE005F54EA /* ColourWheelViewModel.swift in Sources */,
 				D7D527BA26A7434E0053918E /* CreatePaletteView.swift in Sources */,
 				D7D527C026A759E60053918E /* ControlColorView.swift in Sources */,
+				CB5C737F26A76A20000DD8D7 /* CreatePaletteViewModel.swift in Sources */,
 				0E48E6FC269650AF0009ADE4 /* ColourWheelView.swift in Sources */,
 				0E48E7022696510B0009ADE4 /* Helpers.swift in Sources */,
 				D7F079482694F79C00ED8553 /* ContentView.swift in Sources */,
