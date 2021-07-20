@@ -12,26 +12,50 @@ struct SimulationView: View {
         VStack{
             VStack{
                 Circle()
+                    .fill(Color.purple)
+                    .frame(width: 20, height:20)
                 Circle()
+                    .fill(Color.purple)
+                    .frame(width: 20, height: 20)
                 Circle()
+                    .fill(Color.purple)
+                    .frame(width: 20, height: 20)
             }
             HStack{
                 HStack{
                     Circle()
+                        .fill(Color.green)
+                        .frame(width: 20, height: 20)
                     Circle()
+                        .fill(Color.green)
+                        .frame(width: 20, height: 20)
                     Circle()
+                        .fill(Color.green)
+                        .frame(width: 20, height: 20)
                 }
                 HStack{
                     Circle()
+                        .fill(Color.blue)
+                        .frame(width: 20, height: 20)
                     Circle()
+                        .fill(Color.blue)
+                        .frame(width: 20, height: 20)
                     Circle()
+                        .fill(Color.blue)
+                        .frame(width: 20, height: 20)
                 }
             }
             
             VStack{
                 Circle()
+                    .fill(Color.pink)
+                    .frame(width: 20, height: 20)
                 Circle()
+                    .fill(Color.pink)
+                    .frame(width: 20, height: 20)
                 Circle()
+                    .fill(Color.pink)
+                    .frame(width: 20, height: 20)
             }
             
             
@@ -39,7 +63,10 @@ struct SimulationView: View {
                 
             }) {
                 Image(systemName: "power")
-                    .padding(10.0)
+                    .frame(width: 100, height: 50)
+                    .foregroundColor(.white)
+                    .background(Color.accentColor)
+                    .cornerRadius(8)
             }
         }
     }

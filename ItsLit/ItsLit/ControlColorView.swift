@@ -15,22 +15,40 @@ struct ControlColorView: View {
                     .font(.title2)
                 HStack{
                     Circle()
-                        .foregroundColor(.blue)
+                        .fill(Color.blue)
+                        .frame(width: 50, height: 50)
                     Circle()
-                        .foregroundColor(.green)
+                        .fill(Color.green)
+                        .frame(width: 50, height: 50)
                     Circle()
-                        .foregroundColor(.pink)
+                        .fill(Color.pink)
+                        .frame(width: 50, height: 50)
                     Circle()
-                        .foregroundColor(.purple)
+                        .fill(Color.purple)
+                        .frame(width: 50, height: 50)
                     Button(action: {
                         
                     }) {
-                        Image(systemName: "photo")
-                            
+                            Image(systemName: "photo")
+                                .frame(width: 100, height: 50)
+                                .foregroundColor(.white)
+                                .background(Color.accentColor)
+                                .cornerRadius(8)
                     }
+        
+                }
+            
+                //ColourWheelView(viewModel: ColourWheelViewModel())
+                Button(action: {
                     
-                }.padding()
-                ColourWheelView(viewModel: ColourWheelViewModel())
+                }) {
+                        Text("Salvar")
+                            .frame(width: 100, height: 50)
+                            .foregroundColor(.white)
+                            .background(Color.accentColor)
+                            .cornerRadius(8)
+
+                }
             }
 
     }

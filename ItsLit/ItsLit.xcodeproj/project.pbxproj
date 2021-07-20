@@ -184,7 +184,6 @@
 		D7F079392694F79C00ED8553 = {
 			isa = PBXGroup;
 			children = (
-				D72DF7D8269E0CB4008E19AF /* DragView.swift */,
 				D7F079442694F79C00ED8553 /* ItsLit */,
 				D7F079562694F79E00ED8553 /* ItsLitTests */,
 				D7F079612694F79E00ED8553 /* ItsLitUITests */,
@@ -207,6 +206,7 @@
 		D7F079442694F79C00ED8553 /* ItsLit */ = {
 			isa = PBXGroup;
 			children = (
+				D72DF7D8269E0CB4008E19AF /* DragView.swift */,
 				D7F079452694F79C00ED8553 /* ItsLitApp.swift */,
 				0E478B2426989691005F54EA /* LEDS.swift */,
 				D7F079472694F79C00ED8553 /* ContentView.swift */,

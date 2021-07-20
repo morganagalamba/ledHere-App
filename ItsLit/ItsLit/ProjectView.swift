@@ -12,6 +12,9 @@ struct ProjectView: View {
         HStack{
             SimulationView()
             ControlColorView()
+                .background(Color.gray)
+                .cornerRadius(50.0)
+                .padding()
         }
     }
 }
