@@ -29,7 +29,7 @@ struct ColourWheelView: View {
             CustomSlider(rgbColour: $rgbColour, value: $brightness, range: (0...1))
                 .padding()
                 Text("\(brightness)").padding()
-            }
+            }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
             HStack {
                 CustomSlider(rgbColour: $rgbColour, value: $rgbColour.r, range: 0...1)
@@ -38,7 +38,7 @@ struct ColourWheelView: View {
                 ZStack {
                     Text("\(rgbColour.r)")
                 }.padding()
-            }
+            }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
             
             HStack {
@@ -48,7 +48,7 @@ struct ColourWheelView: View {
                 ZStack {
                     Text("\(rgbColour.g)")
                 }.padding()
-            }
+            }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
             HStack {
                 CustomSlider(rgbColour: $rgbColour, value: $rgbColour.b, range: 0.001...1)
@@ -57,7 +57,7 @@ struct ColourWheelView: View {
                 ZStack {
                     Text("\(rgbColour.b)")
                 }.padding()
-            }
+            }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
             Button(action: {
                 viewModel.send(rgbColour: rgbColour)
