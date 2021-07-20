@@ -9,8 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        //ColourWheelView(viewModel: ColourWheelViewModel())
-        DragView()
+        ColourWheelView(viewModel: ColourWheelViewModel())
+//        DragView()
     }
 }
 
