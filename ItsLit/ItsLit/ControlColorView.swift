@@ -55,7 +55,7 @@ struct ControlColorView: View {
         
                 }
             
-                //ColourWheelView(viewModel: ColourWheelViewModel())
+                ColourWheelView(viewModel: ColourWheelViewModel())
                 Button(action: {
                     
                 }) {

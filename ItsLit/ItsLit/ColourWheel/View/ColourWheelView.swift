@@ -21,7 +21,7 @@ struct ColourWheelView: View {
         VStack {
             
             /// The actual colour wheel.
-            ColourWheel(radius: 300, rgbColour: $rgbColour, brightness: $brightness)
+            ColourWheel(radius: 150, rgbColour: $rgbColour, brightness: $brightness)
                 .padding()
             
             /// The slider shows the selected colour and allows control of the brightness/value. Cannot have value at 0 otherwise we lose the RGB value.
