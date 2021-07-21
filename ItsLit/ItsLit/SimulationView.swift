@@ -85,7 +85,7 @@ struct SimulationView: View {
                     .foregroundColor(.white)
                     .background(Color.accentColor)
                     .cornerRadius(8)
-            }
+            }.padding(50)
         }
     }
 }
