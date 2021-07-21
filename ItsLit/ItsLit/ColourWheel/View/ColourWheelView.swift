@@ -52,10 +52,10 @@ struct ColourWheelView: View {
                 }.padding(.horizontal)
             }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
-            
-            
             HStack{
+            Image(systemName: "sun.min.fill")
             CustomSlider(rgbColour: $rgbColour, value: $brightness, range: (0...1))
+            Image(systemName: "sun.max.fill")
                 .padding()
                 //Text("\(brightness)").padding()
             }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
