@@ -26,12 +26,10 @@ struct CreatePaletteView: View {
                         Image(systemName: "xmark.circle.fill")
                             .frame(width: 100, height: 50)
                             .foregroundColor(.white)
-                            .cornerRadius(8)
-                        
                     }
                 }
                     DragView(model: model)
-                        .padding()
+                        //.padding()
                     VStack{
                         Text("Paleta de cores")
                             .padding()
@@ -41,6 +39,7 @@ struct CreatePaletteView: View {
                                 ForEach(0..<model.pallete.count, id: \.self) { row in
                                     Circle()
                                         .foregroundColor(Color(model.pallete[row]))
+                                        .frame(width: 50, height: 50)
                                     }
                             }else{
                                 ForEach(0..<4, id: \.self) { row in
@@ -49,7 +48,7 @@ struct CreatePaletteView: View {
                                         .foregroundColor(Color(red: 12, green: 12, blue: 12, opacity: 0))
                                     }
                             }
-                        }//.padding()
+                        }.padding()
                     }.background(Color(UIColor.systemGray6))
                     .cornerRadius(25.0)
                     .padding()
@@ -65,8 +64,7 @@ struct CreatePaletteView: View {
                     
                 }
             }.padding()
-        }.background(Color.white)
-        
+        }
         .cornerRadius(25.0)
     }
 }
