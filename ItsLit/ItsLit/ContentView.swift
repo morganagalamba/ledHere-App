@@ -8,16 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showPopover: Bool = false
+    
     var body: some View {
         //ColourWheelView(viewModel: ColourWheelViewModel())
         //DragView()
-        ProjectView()
+        ProjectView(showPopover: $showPopover)
         //CreatePaletteView(model: CreatePaletteViewModel())
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+/*struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
-}
+}*/

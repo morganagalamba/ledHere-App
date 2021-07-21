@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct ControlColorView: View {
+    @Binding var showPopover: Bool
+    
     var body: some View {
+        ZStack{
             VStack{
                 Text("Paleta de cores")
                     .padding()
@@ -44,6 +47,7 @@ struct ControlColorView: View {
                     }
                     
                     Button(action: {
+                        self.showPopover = true
                         
                     }) {
                             Image(systemName: "photo")
@@ -54,7 +58,7 @@ struct ControlColorView: View {
                     }
         
                 }
-            
+                
                 ColourWheelView(viewModel: ColourWheelViewModel())
                 Button(action: {
                     
@@ -62,18 +66,22 @@ struct ControlColorView: View {
                         Text("Salvar")
                             .frame(width: 100, height: 50)
                             .foregroundColor(.white)
-                            .background(Color.accentColor)
+                            .background(Color(UIColor.systemBlue))
                             .cornerRadius(8)
 
                 }
             }.padding()
+           
+        }
+     
+        
 
     }
 }
 
-struct ControlColorView_Previews: PreviewProvider {
+/*struct ControlColorView_Previews: PreviewProvider {
     static var previews: some View {
         ControlColorView()
             .landscape()
     }
-}
+}*/

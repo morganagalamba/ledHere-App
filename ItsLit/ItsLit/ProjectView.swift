@@ -8,38 +8,52 @@
 import SwiftUI
 
 struct ProjectView: View {
+    
+    @Binding var showPopover: Bool
+    
     var body: some View {
-        HStack{
-            SimulationView()
-            VStack{
-                ControlColorView()
-                    .background(Color.gray)
-                    .cornerRadius(50.0)
-                EffectsView()
-                    .background(Color.gray)
-                    .cornerRadius(25.0)
-                Button(action: {
-                    
-                }) {
-                        Text("Enviar")
-                            .frame(width: 100, height: 50)
-                            .foregroundColor(.white)
-                            .background(Color.accentColor)
-                            .cornerRadius(8)
+        ZStack{
+            Color(UIColor.systemGray5)
+                .ignoresSafeArea()
+            HStack{
+                SimulationView()
+                VStack{
+                    ControlColorView(showPopover: $showPopover)
+                        .background(Color(UIColor.systemGray6))
+                        .cornerRadius(50.0)
+                    EffectsView()
+                        .background(Color(UIColor.systemGray6))
+                        .cornerRadius(25.0)
+                    Button(action: {
+                        
+                    }) {
+                            Text("Enviar")
+                                .frame(width: 100, height: 50)
+                                .foregroundColor(.white)
+                                .background(Color.accentColor)
+                                .cornerRadius(8)
 
+                    }
                 }
+                
             }
-            
-        }
+            if $showPopover.wrappedValue {
+                CreatePaletteView(showPopover: $showPopover, model: CreatePaletteViewModel())
+                    .frame(width: 500, height: 500, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                    .shadow(radius: 1)
+                    //.padding(.top, 350)
+            }
+        }.background(Color(UIColor.systemGray5))
+        .animation(.easeInOut)
     }
 }
 
-struct ProjectView_Previews: PreviewProvider {
+/*struct ProjectView_Previews: PreviewProvider {
     static var previews: some View {
         ProjectView()
             .landscape()
     }
-}
+}*/
 
 struct LandscapeModifier: ViewModifier {
     let height = UIScreen.main.bounds.width

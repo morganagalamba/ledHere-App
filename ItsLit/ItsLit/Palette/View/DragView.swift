@@ -20,7 +20,7 @@ struct DragView: View {
                     let image = Image(uiImage: image ?? UIImage())
             RoundedRectangle(cornerRadius: 50.0)
                         .overlay(image)
-                        .foregroundColor(.gray)
+                        .foregroundColor(Color(UIColor.systemGray6))
                     Text("Solte aqui uma imagem")
     
                 }.onDrop(of: ["public.image"], isTargeted: $dragOver) { providers -> Bool in
