@@ -19,51 +19,52 @@ struct ColourWheelView: View {
     
     var body: some View {
         VStack {
-            
             /// The actual colour wheel.
             ColourWheel(radius: 150, rgbColour: $rgbColour, brightness: $brightness)
                 .padding()
             
             /// The slider shows the selected colour and allows control of the brightness/value. Cannot have value at 0 otherwise we lose the RGB value.
-            HStack{
-            CustomSlider(rgbColour: $rgbColour, value: $brightness, range: (0...1))
-                .padding()
-                Text("\(brightness)").padding()
-            }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
             HStack {
                 CustomSlider(rgbColour: $rgbColour, value: $rgbColour.r, range: 0...1)
-                    .padding()
-                
+                    .padding(.horizontal)
                 ZStack {
                     Text("\(rgbColour.r)")
-                }.padding()
+                }.padding(.horizontal)
             }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
             
             HStack {
                 CustomSlider(rgbColour: $rgbColour, value: $rgbColour.g, range: 0...1)
-                    .padding()
+                    .padding(.horizontal)
                 
                 ZStack {
                     Text("\(rgbColour.g)")
-                }.padding()
+                }.padding(.horizontal)
             }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
             HStack {
                 CustomSlider(rgbColour: $rgbColour, value: $rgbColour.b, range: 0.001...1)
-                    .padding()
-                
+                    .padding(.horizontal)
+
                 ZStack {
                     Text("\(rgbColour.b)")
-                }.padding()
+                }.padding(.horizontal)
             }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
-            Button(action: {
+            
+            
+            HStack{
+            CustomSlider(rgbColour: $rgbColour, value: $brightness, range: (0...1))
+                .padding()
+                //Text("\(brightness)").padding()
+            }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            
+            /*Button(action: {
                 viewModel.send(rgbColour: rgbColour)
             }, label: {
                 Text("SEND")
-            })
+            })*/
             /// If you don't want a brightness/value slider then remove it and use this instead to show the current colour.
             //            ColourShowView(rgbColour: $rgbColour)
         }

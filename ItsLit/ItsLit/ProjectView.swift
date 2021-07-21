@@ -17,6 +17,8 @@ struct ProjectView: View {
                 .ignoresSafeArea()
             HStack{
                 SimulationView()
+                    .padding()
+                //Spacer()
                 VStack{
                     ControlColorView(showPopover: $showPopover)
                         .background(Color(UIColor.systemGray6))
@@ -34,9 +36,10 @@ struct ProjectView: View {
                                 .cornerRadius(8)
 
                     }
-                }
+                }.padding()
                 
             }
+            .padding(50)
             if $showPopover.wrappedValue {
                 CreatePaletteView(showPopover: $showPopover, model: CreatePaletteViewModel())
                     .frame(width: 500, height: 500, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
