@@ -11,7 +11,6 @@ struct ControlColorView: View {
     @Binding var showPopover: Bool
     
     var body: some View {
-        ZStack{
             VStack{
                 Text("Paleta de cores")
                     .padding()
@@ -71,11 +70,8 @@ struct ControlColorView: View {
 
                 }
             }.padding()
-           
-        }
-     
-        
-
+            .background(Color(UIColor.systemGray6))
+            .cornerRadius(25.0)
     }
 }
 

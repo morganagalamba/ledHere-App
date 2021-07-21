@@ -31,6 +31,9 @@ struct EffectsView: View {
                
             }
         }.padding()
+        .background(Color(UIColor.systemGray6))
+        .cornerRadius(25.0)
+        
     }
 }
 

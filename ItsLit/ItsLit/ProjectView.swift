@@ -18,14 +18,14 @@ struct ProjectView: View {
             HStack{
                 SimulationView()
                     .padding()
-                //Spacer()
+                Spacer()
                 VStack{
                     ControlColorView(showPopover: $showPopover)
-                        .background(Color(UIColor.systemGray6))
-                        .cornerRadius(50.0)
+                        //.background(Color(UIColor.systemGray6))
+                        //.cornerRadius(50.0)
                     EffectsView()
-                        .background(Color(UIColor.systemGray6))
-                        .cornerRadius(25.0)
+                        //.background(Color(UIColor.systemGray6))
+                        //.cornerRadius(25.0)
                     Button(action: {
                         
                     }) {
@@ -37,9 +37,7 @@ struct ProjectView: View {
 
                     }
                 }.padding()
-                
-            }
-            .padding(50)
+            }.padding(.horizontal,200)
             if $showPopover.wrappedValue {
                 CreatePaletteView(showPopover: $showPopover, model: CreatePaletteViewModel())
                     .frame(width: 500, height: 500, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
