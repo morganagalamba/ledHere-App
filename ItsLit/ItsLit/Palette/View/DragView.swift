@@ -17,12 +17,13 @@ struct DragView: View {
     }
     var body: some View {
         ZStack{
-                    let image = Image(uiImage: image ?? UIImage())
-            RoundedRectangle(cornerRadius: 50.0)
-                        .overlay(image)
-                        .foregroundColor(Color(UIColor.systemGray6))
+            let image = Image(uiImage: image ?? UIImage()).padding()
+            RoundedRectangle(cornerRadius: 25.0)
+                .overlay(image)
+                    
+                .foregroundColor(Color(UIColor.systemGray6))
                     Text("Solte aqui uma imagem")
-    
+                    
                 }.onDrop(of: ["public.image"], isTargeted: $dragOver) { providers -> Bool in
                     providers.first?.loadObject(ofClass: UIImage.self, completionHandler: { (image, error) in
                         if let image = image as? UIImage {

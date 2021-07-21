@@ -24,12 +24,14 @@ struct CreatePaletteView: View {
                         self.showPopover = false
                     }) {
                         Image(systemName: "xmark.circle.fill")
-                            .frame(width: 100, height: 50)
+                            .frame(width: 50, height: 50)
                             .foregroundColor(.white)
                     }
                 }
                     DragView(model: model)
-                        //.padding()
+                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                        //.frame(width: 100, height: 100)
+                        .padding()
                     VStack{
                         Text("Paleta de cores")
                             .padding()
