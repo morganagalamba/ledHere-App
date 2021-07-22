@@ -10,6 +10,8 @@ import SwiftUI
 struct ControlColorView: View {
     @Binding var showPopover: Bool
     @Binding var pallet: [Color]
+    @Binding var checkStatus: [Bool]
+    @Binding var ledsColor: [Color]
     
     var body: some View {
             VStack{
@@ -18,28 +20,48 @@ struct ControlColorView: View {
                     .font(.title2)
                 HStack{
                     Button(action: {
-                        
+                        for i in 0 ... 3{
+                            if checkStatus[i] {
+                                ledsColor[i] = pallet[0]
+                            }
+                            //print(i)
+                        }
                     }) {
                         Circle()
                             .fill(pallet[0])
                             .frame(width: 50, height: 50)
                     }
                     Button(action: {
-                        
+                        for i in 0 ... 3{
+                            if checkStatus[i] {
+                                ledsColor[i] = pallet[1]
+                            }
+                            //print(i)
+                        }
                     }) {
                         Circle()
                             .fill(pallet[1])
                             .frame(width: 50, height: 50)
                     }
                     Button(action: {
-                        
+                        for i in 0 ... 3{
+                            if checkStatus[i] {
+                                ledsColor[i] = pallet[2]
+                            }
+                            //print(i)
+                        }
                     }) {
                         Circle()
                             .fill(pallet[2])
                             .frame(width: 50, height: 50)
                     }
                     Button(action: {
-                        
+                        for i in 0 ... 3{
+                            if checkStatus[i] {
+                                ledsColor[i] = pallet[3]
+                            }
+                            //print(i)
+                        }
                     }) {
                         Circle()
                             .fill(pallet[3])

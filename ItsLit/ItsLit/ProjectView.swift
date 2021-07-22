@@ -12,17 +12,18 @@ struct ProjectView: View {
     @Binding var showPopover: Bool
     @Binding var pallet: [Color]
     @Binding var ledsColor: [Color]
+    @Binding var checkStatus: [Bool]
     
     var body: some View {
         ZStack{
             Color(UIColor.systemGray5)
                 .ignoresSafeArea()
             HStack{
-                SimulationView(pallet: $pallet, ledsColor: $ledsColor)
+                SimulationView(pallet: $pallet, ledsColor: $ledsColor, checkStatus: $checkStatus)
                     .padding()
                 Spacer()
                 VStack{
-                    ControlColorView(showPopover: $showPopover, pallet: $pallet)
+                    ControlColorView(showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, ledsColor: $ledsColor)
                         //.background(Color(UIColor.systemGray6))
                         //.cornerRadius(50.0)
                     EffectsView()

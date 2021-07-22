@@ -11,8 +11,7 @@ struct SimulationView: View {
     
     @Binding var pallet: [Color]
     @Binding var ledsColor: [Color]
-    
-    @State var checkStatus: [Bool] = [false, false, false, false]
+    @Binding var checkStatus: [Bool] 
     
     var body: some View {
         VStack{
