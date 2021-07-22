@@ -10,17 +10,19 @@ import SwiftUI
 struct ProjectView: View {
     
     @Binding var showPopover: Bool
+    @Binding var pallet: [Color]
+    @Binding var ledsColor: [Color]
     
     var body: some View {
         ZStack{
             Color(UIColor.systemGray5)
                 .ignoresSafeArea()
             HStack{
-                SimulationView()
+                SimulationView(pallet: $pallet, ledsColor: $ledsColor)
                     .padding()
                 Spacer()
                 VStack{
-                    ControlColorView(showPopover: $showPopover)
+                    ControlColorView(showPopover: $showPopover, pallet: $pallet)
                         //.background(Color(UIColor.systemGray6))
                         //.cornerRadius(50.0)
                     EffectsView()

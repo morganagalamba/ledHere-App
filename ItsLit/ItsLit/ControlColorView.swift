@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ControlColorView: View {
     @Binding var showPopover: Bool
+    @Binding var pallet: [Color]
     
     var body: some View {
             VStack{
@@ -20,28 +21,28 @@ struct ControlColorView: View {
                         
                     }) {
                         Circle()
-                            .fill(Color.blue)
+                            .fill(pallet[0])
                             .frame(width: 50, height: 50)
                     }
                     Button(action: {
                         
                     }) {
                         Circle()
-                            .fill(Color.green)
+                            .fill(pallet[1])
                             .frame(width: 50, height: 50)
                     }
                     Button(action: {
                         
                     }) {
                         Circle()
-                            .fill(Color.pink)
+                            .fill(pallet[2])
                             .frame(width: 50, height: 50)
                     }
                     Button(action: {
                         
                     }) {
                         Circle()
-                            .fill(Color.purple)
+                            .fill(pallet[3])
                             .frame(width: 50, height: 50)
                     }
                     

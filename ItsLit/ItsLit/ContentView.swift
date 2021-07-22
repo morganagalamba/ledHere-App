@@ -6,14 +6,16 @@
 //
 
 import SwiftUI
-
+ 
 struct ContentView: View {
     @State private var showPopover: Bool = false
+    @State var pallet: [Color] = [Color.red ,Color.blue , Color.pink, Color.green]
+    @State var ledsColor: [Color] = [Color.red ,Color.blue , Color.pink, Color.green]
     
     var body: some View {
         //ColourWheelView(viewModel: ColourWheelViewModel())
         //DragView()
-        ProjectView(showPopover: $showPopover)
+        ProjectView(showPopover: $showPopover, pallet: $pallet, ledsColor: $ledsColor)
         //CreatePaletteView(model: CreatePaletteViewModel())
     }
 }
