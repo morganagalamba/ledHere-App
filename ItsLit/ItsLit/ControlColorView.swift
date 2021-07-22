@@ -12,6 +12,7 @@ struct ControlColorView: View {
     @Binding var pallet: [Color]
     @Binding var checkStatus: [Bool]
     @Binding var ledsColor: [Color]
+    @State private var colorSelected: [Bool] = [false,false,false,false]
     
     var body: some View {
             VStack{
@@ -20,6 +21,7 @@ struct ControlColorView: View {
                     .font(.title2)
                 HStack{
                     Button(action: {
+                        colorSelected[0].toggle()
                         for i in 0 ... 3{
                             if checkStatus[i] {
                                 ledsColor[i] = pallet[0]
@@ -27,11 +29,22 @@ struct ControlColorView: View {
                             //print(i)
                         }
                     }) {
-                        Circle()
-                            .fill(pallet[0])
-                            .frame(width: 50, height: 50)
+                        
+                        if colorSelected[0] {
+                            Circle()
+                                .fill(pallet[0])
+                                .frame(width: 50, height: 50)
+                                .overlay(Circle().stroke(Color.blue, lineWidth: 4))
+                        }
+                        else{
+                            Circle()
+                                .fill(pallet[0])
+                                .frame(width: 50, height: 50)
+                        }
+                          
                     }
                     Button(action: {
+                        colorSelected[1].toggle()
                         for i in 0 ... 3{
                             if checkStatus[i] {
                                 ledsColor[i] = pallet[1]
@@ -39,11 +52,20 @@ struct ControlColorView: View {
                             //print(i)
                         }
                     }) {
-                        Circle()
-                            .fill(pallet[1])
-                            .frame(width: 50, height: 50)
+                        if colorSelected[1] {
+                            Circle()
+                                .fill(pallet[1])
+                                .frame(width: 50, height: 50)
+                                .overlay(Circle().stroke(Color.blue, lineWidth: 4))
+                        }
+                        else{
+                            Circle()
+                                .fill(pallet[1])
+                                .frame(width: 50, height: 50)
+                        }
                     }
                     Button(action: {
+                        colorSelected[2].toggle()
                         for i in 0 ... 3{
                             if checkStatus[i] {
                                 ledsColor[i] = pallet[2]
@@ -51,11 +73,20 @@ struct ControlColorView: View {
                             //print(i)
                         }
                     }) {
-                        Circle()
-                            .fill(pallet[2])
-                            .frame(width: 50, height: 50)
+                        if colorSelected[2] {
+                            Circle()
+                                .fill(pallet[2])
+                                .frame(width: 50, height: 50)
+                                .overlay(Circle().stroke(Color.blue, lineWidth: 4))
+                        }
+                        else{
+                            Circle()
+                                .fill(pallet[2])
+                                .frame(width: 50, height: 50)
+                        }
                     }
                     Button(action: {
+                        colorSelected[3].toggle()
                         for i in 0 ... 3{
                             if checkStatus[i] {
                                 ledsColor[i] = pallet[3]
@@ -63,9 +94,17 @@ struct ControlColorView: View {
                             //print(i)
                         }
                     }) {
-                        Circle()
-                            .fill(pallet[3])
-                            .frame(width: 50, height: 50)
+                        if colorSelected[3] {
+                            Circle()
+                                .fill(pallet[0])
+                                .frame(width: 50, height: 50)
+                                .overlay(Circle().stroke(Color.blue, lineWidth: 4))
+                        }
+                        else{
+                            Circle()
+                                .fill(pallet[3])
+                                .frame(width: 50, height: 50)
+                        }
                     }
                     
                     Button(action: {
@@ -82,7 +121,7 @@ struct ControlColorView: View {
                 }
                 
                 ColourWheelView(viewModel: ColourWheelViewModel())
-                Button(action: {
+                /*Button(action: {
                     
                 }) {
                         Text("Salvar")
@@ -91,7 +130,7 @@ struct ControlColorView: View {
                             .background(Color(UIColor.systemBlue))
                             .cornerRadius(8)
 
-                }
+                }*/
             }.padding()
             .background(Color(UIColor.systemGray6))
             .cornerRadius(25.0)
