@@ -16,9 +16,19 @@ class CreatePaletteViewModel: ObservableObject {
         Vibrant.from(image ?? UIImage()).getPalette({ palette in
             self.pallete = []
             self.pallete.append(palette.Muted?.uiColor ?? UIColor())
-            self.pallete.append(palette.DarkMuted?.uiColor ?? UIColor())
+            self.pallete.append(palette.LightMuted?.uiColor ?? UIColor())
             self.pallete.append(palette.LightVibrant?.uiColor ?? UIColor())
             self.pallete.append(palette.Vibrant?.uiColor ?? UIColor())
         })
+    }
+    func send(effect:Int, colors:[[Float]]){
+        var setup = LightsSetup(Effect: effect,ColorSetup: colors)
+        let jsonEncoder = JSONEncoder()
+        do {
+            let jsonData = try jsonEncoder.encode(setup)
+            let json = String(data: jsonData, encoding: String.Encoding.utf16)
+        } catch {
+            print(error)
+        }
     }
 }
