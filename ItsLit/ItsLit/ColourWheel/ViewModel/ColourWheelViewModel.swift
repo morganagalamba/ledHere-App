@@ -44,13 +44,4 @@ class ColourWheelViewModel: ColourWheelViewModelOutput {
         print(ledsJson)
         return ledsJson
     }
-    func getGen(){
-        let image = UIImage(named: "paletatest")
-
-        // Calling from a background thread
-        Vibrant.from(image ?? UIImage()).getPalette({ palette in
-            print(palette.Muted?.uiColor)
-        })
-    
-    }
 }
