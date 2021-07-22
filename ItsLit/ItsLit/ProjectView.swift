@@ -42,7 +42,7 @@ struct ProjectView: View {
                 }.padding()
             }.padding(.horizontal,200)
             if $showPopover.wrappedValue {
-                CreatePaletteView(showPopover: $showPopover, model: CreatePaletteViewModel())
+                CreatePaletteView(showPopover: $showPopover, pallet: $pallet, model: CreatePaletteViewModel())
                     .frame(width: 500, height: 500, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     .shadow(radius: 1)
                     //.padding(.top, 350)

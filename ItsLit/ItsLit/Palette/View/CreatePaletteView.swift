@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CreatePaletteView: View {
     @Binding var showPopover: Bool
+    @Binding var pallet: [Color]
     @ObservedObject
         var model: CreatePaletteViewModel
     var body: some View {
@@ -55,7 +56,10 @@ struct CreatePaletteView: View {
                     .cornerRadius(25.0)
                     .padding()
                 Button(action: {
-                    
+                    for i in 0 ... 3 {
+                        pallet[i] = Color(model.pallete[i])
+                        self.showPopover = false
+                    }
                 }) {
                     Text("Salvar paleta")
                         .padding()
