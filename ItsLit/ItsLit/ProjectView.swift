@@ -13,6 +13,7 @@ struct ProjectView: View {
     @Binding var pallet: [Color]
     @Binding var ledsColor: [Color]
     @Binding var checkStatus: [Bool]
+    @Binding var rgbColour : RGB
     
     var body: some View {
         ZStack{
@@ -23,7 +24,7 @@ struct ProjectView: View {
                     .padding()
                 Spacer()
                 VStack{
-                    ControlColorView(showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, ledsColor: $ledsColor)
+                    ControlColorView(showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, ledsColor: $ledsColor, rgbColour: $rgbColour)
                         //.background(Color(UIColor.systemGray6))
                         //.cornerRadius(50.0)
                     EffectsView()

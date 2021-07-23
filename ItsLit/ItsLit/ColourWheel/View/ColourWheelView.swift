@@ -14,7 +14,7 @@ struct ColourWheelView: View {
     var viewModel: ColourWheelViewModel
     
     /// Source of truth of the colour that will be presented as well as controlled with the colour wheel.
-    @State var rgbColour = RGB(r: 0, g: 1, b: 1)
+    @Binding var rgbColour : RGB
     @State var brightness: CGFloat = 1
     
     var body: some View {
@@ -71,11 +71,11 @@ struct ColourWheelView: View {
     }
 }
 
-struct FinalView_Previews: PreviewProvider {
+/*struct FinalView_Previews: PreviewProvider {
     static var previews: some View {
         ColourWheelView(viewModel: ColourWheelViewModel())
         //            .previewDevice(PreviewDevice(rawValue: "iPad Pro (11-inch)"))
         //            .previewLayout(.fixed(width: 2732, height: 2048))
     }
-}
+}*/
 
