@@ -24,7 +24,7 @@ class CreatePaletteViewModel: ObservableObject {
         send(effect:324,colors: [[0,0,255], [255,0,0]])
     }
     func send(effect:Int, colors:[[Float]]){
-        var setup = LightsSetup(Effect: effect,ColorSetup: colors)
+        let setup = LightsSetup(Token:"***",Effect: effect,ColorSetup: colors)
         let jsonEncoder = JSONEncoder()
         do {
             let jsonData = try jsonEncoder.encode(setup)
