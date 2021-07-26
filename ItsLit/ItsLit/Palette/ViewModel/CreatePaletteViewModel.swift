@@ -19,7 +19,9 @@ class CreatePaletteViewModel: ObservableObject {
             self.pallete.append(palette.LightMuted?.uiColor ?? UIColor())
             self.pallete.append(palette.LightVibrant?.uiColor ?? UIColor())
             self.pallete.append(palette.Vibrant?.uiColor ?? UIColor())
+            
         })
+        send(effect:324,colors: [[0,0,255], [255,0,0]])
     }
     func send(effect:Int, colors:[[Float]]){
         var setup = LightsSetup(Effect: effect,ColorSetup: colors)
@@ -27,7 +29,7 @@ class CreatePaletteViewModel: ObservableObject {
         do {
             let jsonData = try jsonEncoder.encode(setup)
             let json = String(data: jsonData, encoding: String.Encoding.utf8)
-            let url = "http://localhost" //Morgana, alterar aqui
+            let url = "http://192.168.0.127" //Morgana, alterar aqui
             postRequest(url: url, params: json!){
                                 (result, err)  in
                                 //Aqui você tem seu resultado
