@@ -20,6 +20,7 @@ struct ProjectView: View {
             Color(UIColor.systemGray5)
                 .ignoresSafeArea()
             HStack{
+                UmbrellaComponent(models: [Model(id: 0, name: "Umbrella", modelName: "umbrella.usdc")])
                 SimulationView(pallet: $pallet, ledsColor: $ledsColor, checkStatus: $checkStatus)
                     .padding()
                 Spacer()
