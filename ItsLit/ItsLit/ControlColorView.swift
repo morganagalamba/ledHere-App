@@ -16,136 +16,19 @@ struct ControlColorView: View {
     @Binding var rgbColour : RGB
     
     var body: some View {
+        ZStack{
+            Image("Rectangle 5")
+                .resizable()
+//                .fixedSize(horizontal: 570, vertical: 1000)
+                .frame(width: 350, height: 559, alignment: .center)
             VStack{
-                Text("Paleta de cores")
-                    .padding()
-                    .font(.title2)
-                HStack(alignment: .bottom){
-                    VStack{
-                        Button(action: {
-                            colorSelected[0].toggle()
-                            
-                        }) {
-                            if colorSelected[0] {
-                                Image(systemName: "largecircle.fill.circle")
-                            }
-                            else{
-                                Image(systemName: "circle")
-                            }
-                              
-                        }
-                        
-                        Button(action: {
-                            for i in 0 ... 3{
-                                if checkStatus[i] {
-                                    ledsColor[i] = pallet[0]
-                                }
-
-                            }
-                        }) {
-                                Circle()
-                                    .fill(pallet[0])
-                                    .frame(width: 50, height: 50)
-                             
-                        }
-                    }
-                    VStack{
-                        Button(action: {
-                            colorSelected[1].toggle()
-                            
-                        }) {
-                            if colorSelected[1] {
-                                Image(systemName: "largecircle.fill.circle")
-                            }
-                            else{
-                                Image(systemName: "circle")
-                            }
-                              
-                        }
-                        Button(action: {
-                            for i in 0 ... 3{
-                                if checkStatus[i] {
-                                    ledsColor[i] = pallet[1]
-                                }
-                            }
-                        }) {
-                                Circle()
-                                    .fill(pallet[1])
-                                    .frame(width: 50, height: 50)
-
-                        }
-                    }
-                    VStack{
-                        Button(action: {
-                            colorSelected[2].toggle()
-                            
-                        }) {
-                            if colorSelected[2] {
-                                Image(systemName: "largecircle.fill.circle")
-                            }
-                            else{
-                                Image(systemName: "circle")
-                            }
-                              
-                        }
-                        Button(action: {
-                            for i in 0 ... 3{
-                                if checkStatus[i] {
-                                    ledsColor[i] = pallet[2]
-                                }
-                            }
-                        }) {
-                                Circle()
-                                    .fill(pallet[2])
-                                    .frame(width: 50, height: 50)
-                            
-                        }
-                    }
-                    VStack{
-                        Button(action: {
-                            colorSelected[3].toggle()
-                            
-                        }) {
-                            if colorSelected[3] {
-                                Image(systemName: "largecircle.fill.circle")
-                            }
-                            else{
-                                Image(systemName: "circle")
-                            }
-                              
-                        }
-                        Button(action: {
-                            for i in 0 ... 3{
-                                if checkStatus[i] {
-                                    ledsColor[i] = pallet[3]
-                                }
-                            }
-                        }) {
-                                Circle()
-                                    .fill(pallet[3])
-                                    .frame(width: 50, height: 50)
-                            
-                        }
-                        
-                    }
-                    VStack{
-                        Button(action: {
-                            self.showPopover = true
-                            
-                        }) {
-                            
-                                Image(systemName: "photo")
-                                    .frame(width: 100, height: 50)
-                                    .foregroundColor(.white)
-                                    .background(Color.accentColor)
-                                    .cornerRadius(8)
-                        }
-                    }
-                    
-        
-                }
+//                Text("Paleta de cores")
+//                    .padding()
+//                    .font(.title2)
                 
-                ColourWheelView(viewModel: ColourWheelViewModel(), rgbColour: $rgbColour)
+                
+                
+                ColourWheelView(viewModel: ColourWheelViewModel(), rgbColour: $rgbColour, showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, ledsColor: $ledsColor)
                 Button(action: {
                     
                     for i in 0 ... 3 {
@@ -156,22 +39,23 @@ struct ControlColorView: View {
                         
                     }
                 }) {
-                        Text("Salvar")
-                            .frame(width: 100, height: 50)
-                            .foregroundColor(.white)
-                            .background(Color(UIColor.systemBlue))
-                            .cornerRadius(8)
-
+                    Text("Salvar")
+                        .frame(width: 100, height: 50)
+                        .foregroundColor(.white)
+                        .background(Color(UIColor.systemBlue))
+                        .cornerRadius(8)
+                    
                 }
-            }.padding()
-            .background(Color(UIColor.systemGray6))
+            }}.padding()
+//            .background(Color(UIColor.systemGray6))
             .cornerRadius(25.0)
+        }
     }
-}
+
 
 /*struct ControlColorView_Previews: PreviewProvider {
-    static var previews: some View {
-        ControlColorView()
-            .landscape()
-    }
-}*/
+ static var previews: some View {
+ ControlColorView()
+ .landscape()
+ }
+ }*/

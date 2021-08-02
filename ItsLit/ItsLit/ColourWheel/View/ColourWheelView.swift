@@ -16,15 +16,140 @@ struct ColourWheelView: View {
     /// Source of truth of the colour that will be presented as well as controlled with the colour wheel.
     @Binding var rgbColour : RGB
     @State var brightness: CGFloat = 1
+    @Binding var showPopover: Bool
+    @State private var colorSelected: [Bool] = [false,false,false,false]
+    @Binding var pallet: [Color]
+    @Binding var checkStatus: [Bool]
+    @Binding var ledsColor: [Color]
+
     
     var body: some View {
         VStack {
             /// The actual colour wheel.
             ColourWheel(radius: 150, rgbColour: $rgbColour, brightness: $brightness)
                 .padding()
-            
+            HStack{
+                Image(systemName: "sun.min.fill")
+                CustomSlider(rgbColour: $rgbColour, value: $brightness, range: (0...1))
+                Image(systemName: "sun.max.fill")
+                    .padding()
+                //Text("\(brightness)").padding()
+            }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             /// The slider shows the selected colour and allows control of the brightness/value. Cannot have value at 0 otherwise we lose the RGB value.
             
+            HStack(alignment: .bottom){
+                VStack{
+                    
+                    Button(action: {
+                        colorSelected[0].toggle()
+                        
+                    }) {
+                        if colorSelected[0] {
+                            Image(systemName: "largecircle.fill.circle")
+                        }
+                        else{
+                            Image(systemName: "circle")
+                        }
+                        
+                    }
+                    
+                    Button(action: {
+                        for i in 0 ... 3{
+                            if checkStatus[i] {
+                                ledsColor[i] = pallet[0]
+                            }
+                            
+                        }
+                    }) {
+                        Circle()
+                            .fill(pallet[0])
+                            .frame(width: 35, height: 35)
+                        
+                    }
+                }
+                VStack{
+                    Button(action: {
+                        colorSelected[1].toggle()
+                        
+                    }) {
+                        if colorSelected[1] {
+                            Image(systemName: "largecircle.fill.circle")
+                        }
+                        else{
+                            Image(systemName: "circle")
+                        }
+                        
+                    }
+                    Button(action: {
+                        for i in 0 ... 3{
+                            if checkStatus[i] {
+                                ledsColor[i] = pallet[1]
+                            }
+                        }
+                    }) {
+                        Circle()
+                            .fill(pallet[1])
+                            .frame(width: 35, height: 35)
+                        
+                    }
+                }
+                VStack{
+                    Button(action: {
+                        colorSelected[2].toggle()
+                        
+                    }) {
+                        if colorSelected[2] {
+                            Image(systemName: "largecircle.fill.circle")
+                        }
+                        else{
+                            Image(systemName: "circle")
+                        }
+                        
+                    }
+                    Button(action: {
+                        for i in 0 ... 3{
+                            if checkStatus[i] {
+                                ledsColor[i] = pallet[2]
+                            }
+                        }
+                    }) {
+                        Circle()
+                            .fill(pallet[2])
+                            .frame(width: 35, height: 35)
+                        
+                    }
+                }
+                VStack{
+                    Button(action: {
+                        colorSelected[3].toggle()
+                        
+                    }) {
+                        if colorSelected[3] {
+                            Image(systemName: "largecircle.fill.circle")
+                        }
+                        else{
+                            Image(systemName: "circle")
+                        }
+                        
+                    }
+                    Button(action: {
+                        for i in 0 ... 3{
+                            if checkStatus[i] {
+                                ledsColor[i] = pallet[3]
+                            }
+                        }
+                    }) {
+                        Circle()
+                            .fill(pallet[3])
+                            .frame(width: 35, height: 35)
+                        
+                    }
+                    
+                }
+
+            }
+            HStack{
+            VStack{
             HStack {
                 CustomSlider(rgbColour: $rgbColour, value: $rgbColour.r, range: 0...1)
                     .padding(.horizontal)
@@ -51,14 +176,22 @@ struct ColourWheelView: View {
                     Text("\(rgbColour.b)")
                 }.padding(.horizontal)
             }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            }
+                VStack{
+                    Button(action: {
+                        self.showPopover = true
+                        
+                    }) {
+                        
+                        Image(systemName: "photo")
+                            .frame(width: 100, height: 50)
+                            .foregroundColor(.white)
+                            .background(Color.accentColor)
+                            .cornerRadius(8)
+                    }
+                }.padding()
+            }
             
-            HStack{
-            Image(systemName: "sun.min.fill")
-            CustomSlider(rgbColour: $rgbColour, value: $brightness, range: (0...1))
-            Image(systemName: "sun.max.fill")
-                .padding()
-                //Text("\(brightness)").padding()
-            }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
             /*Button(action: {
                 viewModel.send(rgbColour: rgbColour)

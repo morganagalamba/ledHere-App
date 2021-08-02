@@ -17,13 +17,6 @@ struct UmbrellaComponent: View {
         
         VStack{
             
-            // Going to use SceneKit Scene View....
-            
-            // default is first object ie: Earth...
-            
-            // Scene View Has a default Camera View...
-            // if you nedd custom means add there...
-            
             SceneView(scene: SCNScene(named: models[0].modelName), options: [.autoenablesDefaultLighting,.allowsCameraControl])
                 // for user action...
                 // setting custom frame...
@@ -31,8 +24,6 @@ struct UmbrellaComponent: View {
 //            .foregroundColor(.black)
             .padding(.horizontal)
             .padding(.vertical,30)
-                
-            
         }
     }
 }
