@@ -18,7 +18,7 @@ struct ProjectView: View {
     
     var body: some View {
         ZStack{
-            Color(UIColor.systemGray5)
+            Color("background")
                 .ignoresSafeArea()
             HStack{
                 SimulationView(pallet: $pallet, ledsColor: $ledsColor, checkStatus: $checkStatus)

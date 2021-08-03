@@ -21,13 +21,18 @@ struct ColourWheelView: View {
     @Binding var pallet: [Color]
     @Binding var checkStatus: [Bool]
     @Binding var ledsColor: [Color]
-
+    @State var blue: String
+    
+    
     
     var body: some View {
         VStack {
             /// The actual colour wheel.
             ColourWheel(radius: 150, rgbColour: $rgbColour, brightness: $brightness)
                 .padding()
+                .onAppear(perform: {
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
+                })
             HStack{
                 Image(systemName: "sun.min.fill")
                 CustomSlider(rgbColour: $rgbColour, value: $brightness, range: (0...1))
@@ -171,9 +176,19 @@ struct ColourWheelView: View {
             HStack {
                 CustomSlider(rgbColour: $rgbColour, value: $rgbColour.b, range: 0.001...1)
                     .padding(.horizontal)
+                    .onAppear(perform: {
+                        blue = String(format: "%.1f", rgbColour.b)
+                    })
 
                 ZStack {
-                    Text("\(rgbColour.b)")
+                    TextField("StringProtocol", text: $blue) { trocou in
+                        blue = String(format: "%.1f", rgbColour.b)
+                    } onCommit: {
+                        blue = String(format: "%.1f", rgbColour.b)
+                    }
+
+//                    TextField("", text: $blue)
+//                    Text(String(format: "%.1f", rgbColour.b))
                 }.padding(.horizontal)
             }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             }
@@ -189,8 +204,28 @@ struct ColourWheelView: View {
                             .background(Color.accentColor)
                             .cornerRadius(8)
                     }
-                }.padding()
-            }
+                }.padding()}
+                
+                Button(action: {
+                    
+                    for i in 0 ... 3 {
+                        
+                        if colorSelected[i] {
+                            pallet[i] = Color(red: Double(rgbColour.r), green: Double(rgbColour.g), blue: Double(rgbColour.b))
+                        }
+                        
+                    }
+                }) {
+                    Text("Salvar")
+                        .frame(width: 100, height: 50)
+                        .foregroundColor(.white)
+                        .background(Color(UIColor.systemBlue))
+                        .cornerRadius(8)
+                    
+                }
+        
+        
+            
             
             
             /*Button(action: {

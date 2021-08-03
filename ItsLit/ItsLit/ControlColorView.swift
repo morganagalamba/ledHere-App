@@ -28,24 +28,8 @@ struct ControlColorView: View {
                 
                 
                 
-                ColourWheelView(viewModel: ColourWheelViewModel(), rgbColour: $rgbColour, showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, ledsColor: $ledsColor)
-                Button(action: {
-                    
-                    for i in 0 ... 3 {
-                        
-                        if colorSelected[i] {
-                            pallet[i] = Color(red: Double(rgbColour.r), green: Double(rgbColour.g), blue: Double(rgbColour.b))
-                        }
-                        
-                    }
-                }) {
-                    Text("Salvar")
-                        .frame(width: 100, height: 50)
-                        .foregroundColor(.white)
-                        .background(Color(UIColor.systemBlue))
-                        .cornerRadius(8)
-                    
-                }
+                ColourWheelView(viewModel: ColourWheelViewModel(), rgbColour: $rgbColour, showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, ledsColor: $ledsColor, blue: "")
+
             }}.padding()
 //            .background(Color(UIColor.systemGray6))
             .cornerRadius(25.0)
