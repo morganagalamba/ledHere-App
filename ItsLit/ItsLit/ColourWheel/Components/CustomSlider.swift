@@ -30,7 +30,7 @@ struct CustomSlider: View {
     var trailingOffset: CGFloat = 8
     
     /// Set the knob size.
-    var knobSize: CGSize = CGSize(width: 8, height: 8)
+    var knobSize: CGSize = CGSize(width: 15, height: 15)
     
     var body: some View {
         GeometryReader { geometry in
@@ -67,13 +67,14 @@ struct CustomSlider: View {
                     ZStack {
                         /// The knob outline.
                         RoundedRectangle(cornerRadius: 50)
-                            .stroke(Color("background"), lineWidth: self.isTouchingKnob ? 4 : 5)
+                            .stroke(Color("background"), lineWidth: 8)
                             .frame(width: self.knobSize.width, height: self.knobSize.height)
                         /// The knob center.
                         RoundedRectangle(cornerRadius: 50)
                             .foregroundColor(Color.init(red: Double(self.rgbColour.r-0.1), green: Double(self.rgbColour.g-0.1), blue: Double(self.rgbColour.b-0.1)))
                             .frame(width: self.knobSize.width, height: self.knobSize.height)
-                    }
+                    }.shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
                     /// Set the offset of the knob.
                     .offset(x: self.$value.wrappedValue.map(from: self.range, to: self.leadingOffset...(geometry.size.width - self.knobSize.width - self.trailingOffset)))
                     /// The knob shadow.

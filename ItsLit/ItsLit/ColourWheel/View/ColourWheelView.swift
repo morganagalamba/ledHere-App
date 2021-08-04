@@ -193,9 +193,9 @@ struct ColourWheelView: View {
             }.padding(.vertical)
             HStack(alignment: .center) {
                 VStack{
-                    HStack {
+                    HStack(alignment: .top) {
                         Text("R")
-                            .font(.subheadline)
+                            .font(.footnote)
                             .frame(width: 20, height: 20, alignment: .bottom)
                             .foregroundColor(.gray)
                         CustomSlider(rgbColour: $rgbColour, value: $rgbColour.r, range: 0...1)
@@ -206,11 +206,11 @@ struct ColourWheelView: View {
                             Text(String(format: "%.f", rgbColour.r*255))
                                 .frame(minWidth: 40)
                                 .foregroundColor(.gray)
-                        }.padding(.horizontal)
-                    }.frame(width: 150, alignment: .center)
-                    HStack {
+                        }//.padding(.horizontal)
+                    }//.frame(width: 150, alignment: .center)
+                    HStack(alignment: .top)  {
                         Text("G")
-                            .font(.subheadline)
+                            .font(.footnote)
                             .frame(width: 20, height: 20, alignment: .bottom)
                             .foregroundColor(.gray)
                         CustomSlider(rgbColour: $rgbColour, value: $rgbColour.g, range: 0...1)
@@ -219,11 +219,11 @@ struct ColourWheelView: View {
                             Text(String(format: "%.f", rgbColour.g*255))
                                 .frame(minWidth: 40)
                                 .foregroundColor(.gray)
-                        }.padding(.horizontal)
-                    }.frame(width: 150, alignment: .center)
-                    HStack {
+                        }//.padding(.horizontal)
+                    }//.frame(width: 150, alignment: .center)
+                    HStack (alignment: .top) {
                         Text("B")
-                            .font(.subheadline)
+                            .font(.footnote)
                             .frame(width: 20, height: 20, alignment: .bottom)
                             .foregroundColor(.gray)
                         CustomSlider(rgbColour: $rgbColour, value: $rgbColour.b, range: 0.001...1)
@@ -234,8 +234,8 @@ struct ColourWheelView: View {
                                 .frame(minWidth: 40)
                                 .foregroundColor(.gray)
                         }
-                        .padding(.horizontal)
-                    }.frame(width: 150, alignment: .center)
+                        //.padding(.horizontal)
+                    }//.frame(width: 150, alignment: .center)
                 }
                     Button(action: {
                         self.showPopover = true
