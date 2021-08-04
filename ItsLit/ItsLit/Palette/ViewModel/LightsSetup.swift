@@ -7,7 +7,8 @@
 
 import Foundation
 struct LightsSetup: Codable {
-    var Token:String
-    var Effect: Int
     var ColorSetup:[[Float]]
+    //var Token:String
+    //var Effect: Int
+  
 }

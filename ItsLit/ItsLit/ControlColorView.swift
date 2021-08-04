@@ -16,27 +16,30 @@ struct ControlColorView: View {
     @Binding var rgbColour : RGB
     
     var body: some View {
-        ZStack{
-            Image("Rectangle 5")
-                .resizable()
-//                .fixedSize(horizontal: 570, vertical: 1000)
-                .frame(width: 350, height: 559, alignment: .center)
             VStack{
-//                Text("Paleta de cores")
-//                    .padding()
-//                    .font(.title2)
-                
-                
                 
                 ColourWheelView(viewModel: ColourWheelViewModel(), rgbColour: $rgbColour, showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, ledsColor: $ledsColor, blue: "")
 
-            }}.padding()
-//            .background(Color(UIColor.systemGray6))
+            }.padding()
+            .background(Color("background"))
             .cornerRadius(25.0)
-        }
+            .overlay(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(Color("background"),
+                            lineWidth: 2)
+                    .shadow(color: Color.gray, radius: 3, x: 5, y: 5)
+                    .clipShape(
+                        RoundedRectangle(cornerRadius: 15)
+                    )
+                    .shadow(color: Color.white, radius: 2, x: -2, y: -2)
+                    .clipShape(
+                        RoundedRectangle(cornerRadius: 15)
+                    )
+            )
+        
     }
 
-
+}
 /*struct ControlColorView_Previews: PreviewProvider {
  static var previews: some View {
  ControlColorView()

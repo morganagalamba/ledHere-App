@@ -16,7 +16,6 @@
 		0E48E7012696510B0009ADE4 /* ColourStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48E6FF2696510B0009ADE4 /* ColourStructs.swift */; };
 		0E48E7022696510B0009ADE4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48E7002696510B0009ADE4 /* Helpers.swift */; };
 		0EA0974B26B1EA8000DE5BBC /* led.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 0EA0974926B1EA8000DE5BBC /* led.usdc */; };
-		0EA0974C26B1EA8000DE5BBC /* umbrella.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 0EA0974A26B1EA8000DE5BBC /* umbrella.usdz */; };
 		0EA0974E26B1EB1400DE5BBC /* UmbrellaComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA0974D26B1EB1400DE5BBC /* UmbrellaComponent.swift */; };
 		0EA0975026B1EB2B00DE5BBC /* LedComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA0974F26B1EB2B00DE5BBC /* LedComponent.swift */; };
 		0EA0975226B4700300DE5BBC /* cena.scn in Resources */ = {isa = PBXBuildFile; fileRef = 0EA0975126B4700300DE5BBC /* cena.scn */; };
@@ -66,7 +65,6 @@
 		0E48E6FF2696510B0009ADE4 /* ColourStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourStructs.swift; sourceTree = "<group>"; };
 		0E48E7002696510B0009ADE4 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		0EA0974926B1EA8000DE5BBC /* led.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = led.usdc; sourceTree = "<group>"; };
-		0EA0974A26B1EA8000DE5BBC /* umbrella.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = umbrella.usdz; sourceTree = "<group>"; };
 		0EA0974D26B1EB1400DE5BBC /* UmbrellaComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmbrellaComponent.swift; sourceTree = "<group>"; };
 		0EA0974F26B1EB2B00DE5BBC /* LedComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedComponent.swift; sourceTree = "<group>"; };
 		0EA0975126B4700300DE5BBC /* cena.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = cena.scn; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				0EA0974926B1EA8000DE5BBC /* led.usdc */,
-				0EA0974A26B1EA8000DE5BBC /* umbrella.usdz */,
 				0EA0975126B4700300DE5BBC /* cena.scn */,
 				0EA0974D26B1EB1400DE5BBC /* UmbrellaComponent.swift */,
 				0EA0974F26B1EB2B00DE5BBC /* LedComponent.swift */,
@@ -415,7 +412,6 @@
 			files = (
 				0EA0975226B4700300DE5BBC /* cena.scn in Resources */,
 				0EA0974B26B1EA8000DE5BBC /* led.usdc in Resources */,
-				0EA0974C26B1EA8000DE5BBC /* umbrella.usdz in Resources */,
 				D7F0794D2694F79E00ED8553 /* Preview Assets.xcassets in Resources */,
 				D7F0794A2694F79E00ED8553 /* Assets.xcassets in Resources */,
 			);

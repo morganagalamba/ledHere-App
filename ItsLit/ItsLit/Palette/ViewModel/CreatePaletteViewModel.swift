@@ -21,56 +21,45 @@ class CreatePaletteViewModel: ObservableObject {
             self.pallete.append(palette.Vibrant?.uiColor ?? UIColor())
             
         })
-        send(effect:324,colors: [[0,0,255], [255,0,0]])
+        send(effect:324,colors: [[0,0,255], [0,0,0],[123,456,789],[321,654,987]])
     }
     func send(effect:Int, colors:[[Float]]){
-        let setup = LightsSetup(Token:"***",Effect: effect,ColorSetup: colors)
-        let jsonEncoder = JSONEncoder()
-        do {
-            let jsonData = try jsonEncoder.encode(setup)
-            let json = String(data: jsonData, encoding: String.Encoding.utf8)
-            let url = "http://192.168.0.127" //Morgana, alterar aqui
-            postRequest(url: url, params: json!){
-                                (result, err)  in
-                                //Aqui você tem seu resultado
-                                if let res:Bool = (result?.values.first as? Bool) {
-                                    if(res) {
-                                        //Aqui res podera assumir dois valores, true ou false
-                                        print("sua requisicao foi realizada com sucesso")
-                                    } else {
-                                        //Aqui voce pode tratar os erros
-                                        print("a requisicao nao funcionou")
-                                    }
-                                }
-                            }
-        } catch {
-            print(error)
-        }
+        //Coloque a URL da sua API aqui
+        let url = "http://192.168.0.101/ColorsSetup:[[0,0,255],[255,0,0],[255,0,0],[0,0,255]]"
+        print(url)
+        //Chamando a funcão GET
+        getRequest(url: url){
+            (resultado, erro)  in
+              if(resultado != nil) {
+                  //O resultado aqui vem como Opcional
+                  print("Sua requisicao foi realizada com sucesso: \n \(resultado)")
+              } else {
+                  print("A requisicao nao funcionou")
+              }
+
     }
-    
-    func postRequest(url: String, params: String,
+    func getRequest(url: String,
                      completion: @escaping ([String: Any]?, Error?) -> Void){
         //URL válida
         guard let URL = URL(string: url) else {
             completion(nil, nil)
             return
         }
-            
+      
+      
         //Cria a representacão da requisição
         let request = NSMutableURLRequest(url: URL)
 
-        //Atribui à requisiçāo o método POST
-        request.httpMethod = "POST"
-
-        //Codifica o corpo da mensagem em "data" usando utf8
-        request.httpBody = params.data(using: String.Encoding.utf8)
-
-
+        
+        //Atribui à requisiçāo o método GET
+        request.httpMethod = "GET"
+        
+      
         //Cria a tarefa de requisição
         let task = URLSession.shared.dataTask(with: request as URLRequest) {
             (data, response, error) in
             do {
-
+                
                 if let data = data {
                     //A resposta chegou
                     let response = try JSONSerialization.jsonObject(with: data, options: [])
@@ -81,13 +70,16 @@ class CreatePaletteViewModel: ObservableObject {
                     completion(nil, nil)
                 }
             } catch let error as NSError {
-                //Houve um erro na comunicao com o servidor
+                // Houve um erro na comunicao com o servidor
                 completion(nil, error)
             }
         }
-
-
+        
+        
         //Aciona a tarefa
         task.resume()
+        
     }
+
+}
 }
