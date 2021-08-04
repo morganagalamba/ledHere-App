@@ -197,34 +197,44 @@ struct ColourWheelView: View {
                 VStack{
                     HStack {
                         Text("R")
+                            .font(.subheadline)
+                            .frame(width: 20, height: 20, alignment: .bottom)
+                            .foregroundColor(.gray)
                         CustomSlider(rgbColour: $rgbColour, value: $rgbColour.r, range: 0...1)
                             .frame(width: 85)
                             .foregroundColor(.gray)
                             .background(Color("background"))
-                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
-                            .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
                         ZStack {
                             Text(String(format: "%.f", rgbColour.r*255))
                                 .frame(minWidth: 40)
+                                .foregroundColor(.gray)
                         }.padding(.horizontal)
                     }.frame(width: 150, alignment: .center)
                     HStack {
                         Text("G")
+                            .font(.subheadline)
+                            .frame(width: 20, height: 20, alignment: .bottom)
+                            .foregroundColor(.gray)
                         CustomSlider(rgbColour: $rgbColour, value: $rgbColour.g, range: 0...1)
                             .frame(width: 85)
                         ZStack {
                             Text(String(format: "%.f", rgbColour.g*255))
                                 .frame(minWidth: 40)
+                                .foregroundColor(.gray)
                         }.padding(.horizontal)
                     }.frame(width: 150, alignment: .center)
                     HStack {
                         Text("B")
+                            .font(.subheadline)
+                            .frame(width: 20, height: 20, alignment: .bottom)
+                            .foregroundColor(.gray)
                         CustomSlider(rgbColour: $rgbColour, value: $rgbColour.b, range: 0.001...1)
                             .frame(width: 85)
                         
                         ZStack {
                             Text(String(format: "%.f", rgbColour.b*255))
                                 .frame(minWidth: 40)
+                                .foregroundColor(.gray)
                         }
                         .padding(.horizontal)
                     }.frame(width: 150, alignment: .center)
