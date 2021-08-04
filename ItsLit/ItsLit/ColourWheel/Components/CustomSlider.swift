@@ -30,7 +30,7 @@ struct CustomSlider: View {
     var trailingOffset: CGFloat = 8
     
     /// Set the knob size.
-    var knobSize: CGSize = CGSize(width: 15, height: 15)
+    var knobSize: CGSize = CGSize(width: 8, height: 8)
     
     var body: some View {
         GeometryReader { geometry in
@@ -91,7 +91,7 @@ struct CustomSlider: View {
                 }
             }
         }
-        .frame(height: 20)
+        .frame(height: 1)
     }
 }
 
