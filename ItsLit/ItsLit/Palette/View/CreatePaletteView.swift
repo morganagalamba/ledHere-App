@@ -18,7 +18,7 @@ struct CreatePaletteView: View {
                 .ignoresSafeArea()
             VStack{
                 HStack{
-                    Text("Criar Paleta")
+                    Text("Criar Paleta através da foto")
                         .font(.title)
                     Spacer()
                     Button(action: {
@@ -31,7 +31,6 @@ struct CreatePaletteView: View {
                 }
                     DragView(model: model)
                         .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                        //.frame(width: 100, height: 100)
                         .padding()
                     VStack{
                         Text("Paleta de cores")
@@ -64,9 +63,11 @@ struct CreatePaletteView: View {
                     Text("Salvar paleta")
                         .padding()
                         .frame(width: 150, height: 50)
-                        .foregroundColor(.white)
-                        .background(Color.accentColor)
+                        .foregroundColor(.gray)
+                        .background(Color("background"))
                         .cornerRadius(8)
+                        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                        .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
                     
                 }
             }.padding()
