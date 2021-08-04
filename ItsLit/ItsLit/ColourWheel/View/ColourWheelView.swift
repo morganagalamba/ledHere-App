@@ -21,18 +21,13 @@ struct ColourWheelView: View {
     @Binding var pallet: [Color]
     @Binding var checkStatus: [Bool]
     @Binding var ledsColor: [Color]
-    @State var blue: String
-    
-    
+
     
     var body: some View {
         VStack {
             /// The actual colour wheel.
             ColourWheel(radius: 150, rgbColour: $rgbColour, brightness: $brightness)
                 .padding()
-                .onAppear(perform: {
-                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
-                })
             HStack{
                 Image(systemName: "sun.min.fill")
                 CustomSlider(rgbColour: $rgbColour, value: $brightness, range: (0...1))
@@ -159,7 +154,7 @@ struct ColourWheelView: View {
                 CustomSlider(rgbColour: $rgbColour, value: $rgbColour.r, range: 0...1)
                     .padding(.horizontal)
                 ZStack {
-                    Text("\(rgbColour.r)")
+                    Text(String(format: "%.2f", rgbColour.r))
                 }.padding(.horizontal)
             }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
@@ -169,26 +164,16 @@ struct ColourWheelView: View {
                     .padding(.horizontal)
                 
                 ZStack {
-                    Text("\(rgbColour.g)")
+                    Text(String(format: "%.2f", rgbColour.g))
                 }.padding(.horizontal)
             }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             
             HStack {
                 CustomSlider(rgbColour: $rgbColour, value: $rgbColour.b, range: 0.001...1)
                     .padding(.horizontal)
-                    .onAppear(perform: {
-                        blue = String(format: "%.1f", rgbColour.b)
-                    })
 
                 ZStack {
-                    TextField("StringProtocol", text: $blue) { trocou in
-                        blue = String(format: "%.1f", rgbColour.b)
-                    } onCommit: {
-                        blue = String(format: "%.1f", rgbColour.b)
-                    }
-
-//                    TextField("", text: $blue)
-//                    Text(String(format: "%.1f", rgbColour.b))
+                    Text(String(format: "%.2f", rgbColour.b))
                 }.padding(.horizontal)
             }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             }
@@ -223,6 +208,7 @@ struct ColourWheelView: View {
                         .cornerRadius(8)
                     
                 }
+
         
         
             
@@ -236,6 +222,7 @@ struct ColourWheelView: View {
             /// If you don't want a brightness/value slider then remove it and use this instead to show the current colour.
             //            ColourShowView(rgbColour: $rgbColour)
         }
+        .frame(width: 267.0, height: 475.0)
     }
 }
 

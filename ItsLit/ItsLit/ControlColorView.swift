@@ -18,7 +18,7 @@ struct ControlColorView: View {
     var body: some View {
             VStack{
                 
-                ColourWheelView(viewModel: ColourWheelViewModel(), rgbColour: $rgbColour, showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, ledsColor: $ledsColor, blue: "")
+                ColourWheelView(viewModel: ColourWheelViewModel(), rgbColour: $rgbColour, showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, ledsColor: $ledsColor)
 
             }.padding()
             .background(Color("background"))
