@@ -36,7 +36,7 @@ struct ColourWheelView: View {
                    
             } .padding([.top, .leading, .trailing])
             
-            HStack{
+            HStack(alignment: .top){
                 Image(systemName: "sun.min.fill")
                     .foregroundColor(.gray)
                 CustomSlider(rgbColour: $rgbColour, value: $brightness, range: (0...1))
@@ -45,10 +45,8 @@ struct ColourWheelView: View {
                     
                 Image(systemName: "sun.max.fill")
                     .foregroundColor(.gray)
-                //Text("\(brightness)").padding()
-            }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+            }.padding(.top,10)
             /// The slider shows the selected colour and allows control of the brightness/value. Cannot have value at 0 otherwise we lose the RGB value.
-            
             HStack(alignment: .bottom){
                 VStack{
                     
@@ -192,7 +190,7 @@ struct ColourWheelView: View {
                     
                 }
                 
-            }
+            }.padding(.vertical)
             HStack(alignment: .center) {
                 VStack{
                     HStack {
@@ -267,8 +265,8 @@ struct ColourWheelView: View {
                     .cornerRadius(8)
                     .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
                     .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-            }
-        }.frame(width: 267.0, height: 475.0)
+            }.padding(.vertical)
+        }//.frame(width: 267.0, height: 475.0)
     }
 }
 

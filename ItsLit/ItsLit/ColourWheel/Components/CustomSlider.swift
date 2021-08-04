@@ -36,23 +36,38 @@ struct CustomSlider: View {
         GeometryReader { geometry in
             ZStack {
                 
-                /// The slider track.
-                RoundedRectangle(cornerRadius: 30)
-                    /// Set the colour to be the selected colour.
-                    .foregroundColor(Color.init(red: Double(self.rgbColour.r), green: Double(self.rgbColour.g), blue: Double(self.rgbColour.b)))
-                    /// The outline.
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 30)
-                            .stroke(Color("Outline"), lineWidth: 3)
-                    )
-                    /// The outer shadow.
-                    .shadow(color: Color("ShadowOuter"), radius: 18)
+                ZStack{
+                    /// The slider track.
+                    RoundedRectangle(cornerRadius: 7)
+                        .frame(minHeight: 20)
+                        .foregroundColor(Color("background"))
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 7)
+                                .stroke(Color("background"),
+                                        lineWidth: 2)
+                                .shadow(color: Color.gray, radius: 3, x: 2, y: 2)
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 7)
+                                )
+                                .shadow(color: Color.white, radius: 2, x: -2, y: -2)
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 7)
+                                )
+                        )
+                    RoundedRectangle(cornerRadius: 5)
+                        .frame(maxHeight: 10)
+                        .foregroundColor(Color.init(red: Double(self.rgbColour.r), green: Double(self.rgbColour.g), blue: Double(self.rgbColour.b)))
+                        .padding(.horizontal,5)
+                }
+                
+    
+                   
                 HStack {
                     /// The knob.
                     ZStack {
                         /// The knob outline.
                         RoundedRectangle(cornerRadius: 50)
-                            .stroke(Color("Outline"), lineWidth: self.isTouchingKnob ? 4 : 5)
+                            .stroke(Color("background"), lineWidth: self.isTouchingKnob ? 4 : 5)
                             .frame(width: self.knobSize.width, height: self.knobSize.height)
                         /// The knob center.
                         RoundedRectangle(cornerRadius: 50)
