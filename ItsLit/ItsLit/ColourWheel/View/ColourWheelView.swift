@@ -26,8 +26,16 @@ struct ColourWheelView: View {
     var body: some View {
         VStack {
             /// The actual colour wheel.
-            ColourWheel(radius: 210, rgbColour: $rgbColour, brightness: $brightness)
-                .padding([.top, .leading, .trailing])
+            ZStack{
+                Circle()
+                    .fill(Color("background"))
+                    .frame(width: 230, height: 230)
+                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                ColourWheel(radius: 210, rgbColour: $rgbColour, brightness: $brightness)
+                   
+            } .padding([.top, .leading, .trailing])
+            
             HStack{
                 Image(systemName: "sun.min.fill")
                     .foregroundColor(.gray)

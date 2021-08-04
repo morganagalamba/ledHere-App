@@ -29,26 +29,15 @@ struct ColourWheel: View {
         /// Geometry reader so we can know more about the geometry around and within the view.
         return GeometryReader { geometry in
             ZStack {
-                
                 /// The colour wheel. See the definition.
                 CIHueSaturationValueGradientView(radius: self.radius, brightness: self.$brightness)
                     /// Smoothing out of the colours.
                     .blur(radius: 10)
                     /// The outline.
-                    .overlay(
-                        Circle()
-                            .size(CGSize(width: self.radius, height: self.radius))
-                            .stroke(Color("Outline"), lineWidth: 10)
-                            /// Inner shadow.
-                            .shadow(color: Color("ShadowInner"), radius: 8)
-                    )
-                    /// Clip inner shadow.
                     .clipShape(
                         Circle()
                             .size(CGSize(width: self.radius, height: self.radius))
                     )
-                    /// Outer shadow.
-                    .shadow(color: Color("ShadowOuter"), radius: 15)
                 
                 /// This is not required and actually makes the gradient less "accurate" but looks nicer. It's basically just a white radial gradient that blends the colours together nicer. We also slowly dissolve it as the brightness/value goes down.
                 RadialGradient(gradient: Gradient(colors: [Color.white.opacity(0.8*Double(self.brightness)), .clear]), center: .center, startRadius: 0, endRadius: self.radius/2 - 10)
