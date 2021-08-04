@@ -19,11 +19,11 @@ struct SimulationView: View {
                 checkStatus[0].toggle()
             }) {
                 VStack{
-                    if checkStatus[0] {
+                    /*if checkStatus[0] {
                         Image(systemName: "checkmark.square.fill")
                     } else {
                         Image(systemName: "square")
-                    }
+                    }*/
                     Circle()
                         .fill(ledsColor[0])
                         .frame(width: 20, height:20)
@@ -42,11 +42,11 @@ struct SimulationView: View {
                     checkStatus[1].toggle()
                 }) {
                     HStack{
-                        if checkStatus[1] {
+                        /*if checkStatus[1] {
                             Image(systemName: "checkmark.square.fill")
                         } else {
                             Image(systemName: "square")
-                        }
+                        }*/
                         Circle()
                             .fill(ledsColor[1])
                             .frame(width: 20, height: 20)
@@ -72,11 +72,11 @@ struct SimulationView: View {
                         Circle()
                             .fill(ledsColor[2])
                             .frame(width: 20, height: 20)
-                        if checkStatus[2] {
+                        /*if checkStatus[2] {
                             Image(systemName: "checkmark.square.fill")
                         } else {
                             Image(systemName: "square")
-                        }
+                        }*/
                     }
                 }
                
@@ -94,25 +94,14 @@ struct SimulationView: View {
                     Circle()
                         .fill(ledsColor[3])
                         .frame(width: 20, height: 20)
-                    if checkStatus[3] {
+                    /*if checkStatus[3] {
                         Image(systemName: "checkmark.square.fill")
                     } else {
                         Image(systemName: "square")
-                    }
+                    }*/
                 }
             }
             
-            
-            
-            Button(action: {
-                
-            }) {
-                Image(systemName: "power")
-                    .frame(width: 100, height: 50)
-                    .foregroundColor(.white)
-                    .background(Color.accentColor)
-                    .cornerRadius(8)
-            }.padding(50)
         }
     }
 }

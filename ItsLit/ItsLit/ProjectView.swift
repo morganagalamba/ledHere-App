@@ -28,19 +28,20 @@ struct ProjectView: View {
                     
                 VStack{
                     ControlColorView(showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, ledsColor: $ledsColor, rgbColour: $rgbColour)
-                        //.background(Color(UIColor.systemGray6))
-                        //.cornerRadius(50.0)
-                    EffectsView()
-                        //.background(Color(UIColor.systemGray6))
-                        //.cornerRadius(25.0)
+
+                    //EffectsView()
+                        
                     Button(action: {
                         
                     }) {
                             Text("Enviar")
                                 .frame(width: 100, height: 50)
-                                .foregroundColor(.white)
-                                .background(Color.accentColor)
+                                .foregroundColor(.gray)
+                                .background(Color("background"))
                                 .cornerRadius(8)
+                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                        
 
                     }
                 }.padding()
