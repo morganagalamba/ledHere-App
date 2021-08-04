@@ -30,23 +30,13 @@ struct ColourWheelView: View {
                 .padding([.top, .leading, .trailing])
             HStack{
                 Image(systemName: "sun.min.fill")
+                    .foregroundColor(.gray)
                 CustomSlider(rgbColour: $rgbColour, value: $brightness, range: (0...1))
                     .frame(width: 125)
                     .background(Color("background"))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 15)
-                            .stroke(Color("background"),
-                                    lineWidth: 2)
-                            .shadow(color: Color.gray, radius: 3, x: 5, y: 5)
-                            .clipShape(
-                                RoundedRectangle(cornerRadius: 15)
-                            )
-                            .shadow(color: Color.white, radius: 2, x: -2, y: -2)
-                            .clipShape(
-                                RoundedRectangle(cornerRadius: 15)
-                            )
-                    )
+                    
                 Image(systemName: "sun.max.fill")
+                    .foregroundColor(.gray)
                 //Text("\(brightness)").padding()
             }.frame(width: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             /// The slider shows the selected colour and allows control of the brightness/value. Cannot have value at 0 otherwise we lose the RGB value.
@@ -75,9 +65,17 @@ struct ColourWheelView: View {
                             
                         }
                     }) {
-                        Circle()
-                            .fill(pallet[0])
-                            .frame(width: 35, height: 35)
+                        ZStack{
+                            Circle()
+                                .fill(Color("background"))
+                                .frame(width: 50, height: 50)
+                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                            Circle()
+                                .fill(pallet[0])
+                                .frame(width: 35, height: 35)
+                                
+                        }
                         
                     }
                 }
@@ -101,9 +99,18 @@ struct ColourWheelView: View {
                             }
                         }
                     }) {
-                        Circle()
-                            .fill(pallet[1])
-                            .frame(width: 35, height: 35)
+                        
+                        ZStack{
+                            Circle()
+                                .fill(Color("background"))
+                                .frame(width: 50, height: 50)
+                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                            Circle()
+                                .fill(pallet[1])
+                                .frame(width: 35, height: 35)
+                                
+                        }
                         
                     }
                 }
@@ -127,9 +134,17 @@ struct ColourWheelView: View {
                             }
                         }
                     }) {
-                        Circle()
-                            .fill(pallet[2])
-                            .frame(width: 35, height: 35)
+                        ZStack{
+                            Circle()
+                                .fill(Color("background"))
+                                .frame(width: 50, height: 50)
+                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                            Circle()
+                                .fill(pallet[2])
+                                .frame(width: 35, height: 35)
+                                
+                        }
                         
                     }
                 }
@@ -153,9 +168,18 @@ struct ColourWheelView: View {
                             }
                         }
                     }) {
-                        Circle()
-                            .fill(pallet[3])
-                            .frame(width: 35, height: 35)
+                        ZStack{
+                            Circle()
+                                .fill(Color("background"))
+                                .frame(width: 50, height: 50)
+                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                            Circle()
+                                .fill(pallet[3])
+                                .frame(width: 35, height: 35)
+                                
+                        }
+                        
                     }
                     
                 }
@@ -169,22 +193,8 @@ struct ColourWheelView: View {
                             .frame(width: 85)
                             .foregroundColor(.gray)
                             .background(Color("background"))
-//                            .cornerRadius(8)
                             .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
                             .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 15)
-                                    .stroke(Color("background"),
-                                            lineWidth: 2)
-                                    .shadow(color: Color.gray, radius: 3, x: 5, y: 5)
-                                    .clipShape(
-                                        RoundedRectangle(cornerRadius: 15)
-                                    )
-                                    .shadow(color: Color.white, radius: 2, x: -2, y: -2)
-                                    .clipShape(
-                                        RoundedRectangle(cornerRadius: 15)
-                                    )
-                            )
                         ZStack {
                             Text(String(format: "%.f", rgbColour.r*255))
                                 .frame(minWidth: 40)
@@ -216,8 +226,7 @@ struct ColourWheelView: View {
                     }) {
                         Image(systemName: "photo")
                             .frame(width: 56, height: 36)
-                            .foregroundColor(.white)
-//                            .background(Color.accentColor)
+                            .foregroundColor(.gray)
                             .cornerRadius(8)
                     }
                     .foregroundColor(.gray)
