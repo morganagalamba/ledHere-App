@@ -17,31 +17,59 @@ struct CreatePaletteView: View {
             Color("background")
                 .ignoresSafeArea()
             VStack{
-                HStack{
-                    Text("Criar Paleta através da foto")
-                        .font(.title)
+                HStack(){
                     Spacer()
                     Button(action: {
                         self.showPopover = false
                     }) {
-                        Image(systemName: "xmark.circle.fill")
-                            .frame(width: 50, height: 50)
-                            .foregroundColor(.white)
+                        Image(systemName: "xmark")
+                            .font(Font.headline.weight(.bold))
+                            .frame(width: 80, height: 80)
+                            .foregroundColor(.gray)
                     }
+                    
+                }.padding(.horizontal)
+
+                
+                
+                HStack(alignment: .center){
+                    Text("Criar Paleta através da foto")
+                        .font(.title3)
+                        .foregroundColor(.gray)
+                    
                 }
                     DragView(model: model)
-                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                        .padding()
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color("background"),
+                                        lineWidth: 2)
+                                .shadow(color: Color.gray, radius: 3, x: 5, y: 5)
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 15)
+                                )
+                                .shadow(color: Color.white, radius: 2, x: -2, y: -2)
+                                .clipShape(
+                                    RoundedRectangle(cornerRadius: 15)
+                                )
+                        )
+                        .frame(width: 250, height: 400)
+                        
                     VStack{
-                        Text("Paleta de cores")
-                            .padding()
-                            .font(.title2)
                         HStack{
                             if(model.pallete.count > 0){
                                 ForEach(0..<model.pallete.count, id: \.self) { row in
-                                    Circle()
-                                        .foregroundColor(Color(model.pallete[row]))
-                                        .frame(width: 50, height: 50)
+                                    ZStack{
+                                        Circle()
+                                            .foregroundColor(Color("background"))
+                                            .frame(width: 60, height: 60)
+                                            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                            .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                                            
+                                        Circle()
+                                            .foregroundColor(Color(model.pallete[row]))
+                                            .frame(width: 40, height: 40)
+                                    }
+                                    
                                     }
                             }else{
                                 ForEach(0..<4, id: \.self) { row in
@@ -50,10 +78,9 @@ struct CreatePaletteView: View {
                                         .foregroundColor(Color(red: 12, green: 12, blue: 12, opacity: 0))
                                     }
                             }
-                        }.padding()
-                    }.background(Color(UIColor.systemGray6))
-                    .cornerRadius(25.0)
-                    .padding()
+                        }//.padding()
+                    }
+                    //.padding()
                 Button(action: {
                     for i in 0 ... 3 {
                         pallet[i] = Color(model.pallete[i])
@@ -70,7 +97,7 @@ struct CreatePaletteView: View {
                         .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
                     
                 }
-            }.padding()
+            }
         }
         .cornerRadius(25.0)
     }
