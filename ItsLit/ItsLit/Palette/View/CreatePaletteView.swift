@@ -14,7 +14,7 @@ struct CreatePaletteView: View {
         var model: CreatePaletteViewModel
     var body: some View {
         ZStack{
-            Color(UIColor.systemGray5)
+            Color("background")
                 .ignoresSafeArea()
             VStack{
                 HStack{

@@ -27,10 +27,16 @@ struct ProjectView: View {
                 ZStack{
                     
                 VStack{
-                    ControlColorView(showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, ledsColor: $ledsColor, rgbColour: $rgbColour)
-
-                    //EffectsView()
-                        
+                    ZStack{
+                        ControlColorView(showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, ledsColor: $ledsColor, rgbColour: $rgbColour)
+                        if $showPopover.wrappedValue {
+                            CreatePaletteView(showPopover: $showPopover, pallet: $pallet, model: CreatePaletteViewModel())
+                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                                
+                        }
+                    }
+                                
                     Button(action: {
                         
                     }) {
@@ -44,14 +50,9 @@ struct ProjectView: View {
                     .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
                 }.padding()
             }}.padding(.horizontal,200)
-            if $showPopover.wrappedValue {
-                CreatePaletteView(showPopover: $showPopover, pallet: $pallet, model: CreatePaletteViewModel())
-                    .frame(width: 500, height: 500, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    .shadow(radius: 1)
-                    //.padding(.top, 350)
-            }
-        }.background(Color(UIColor.systemGray5))
-        .animation(.easeInOut)
+            
+        }//.background(Color(UIColor.systemGray5))
+        //.animation(.easeInOut)
     }
 }
 
