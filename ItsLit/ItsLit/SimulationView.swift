@@ -13,6 +13,8 @@ struct SimulationView: View {
     @Binding var checkStatus: [Bool] 
     
     var body: some View {
+        ZStack{
+            Image("umbrella")
         VStack{
             Button(action: {
                 checkStatus[0].toggle()
@@ -56,7 +58,7 @@ struct SimulationView: View {
                             .fill(pallet[1])
                             .frame(width: 20, height: 20)
                         
-                    }
+                    }.padding(.trailing, 20)
                 }
                 Button(action: {
                     checkStatus[2].toggle()
@@ -101,6 +103,7 @@ struct SimulationView: View {
                 }
             }
             
+        }
         }
     }
 }

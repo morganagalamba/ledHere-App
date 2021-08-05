@@ -12,7 +12,6 @@ struct ProjectView: View {
     @Binding var pallet: [Color]
     @Binding var checkStatus: [Bool]
     @Binding var rgbColour : RGB
-    @State var scene = UmbrellaComponent(models: [Model(id: 0, name: "Umbrella", modelName: "cena.scn")])
     
     var body: some View {
         ZStack{
@@ -31,8 +30,6 @@ struct ProjectView: View {
                             CreatePaletteView(showPopover: $showPopover, pallet: $pallet, model: CreatePaletteViewModel())
                                 .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
                                 .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-                                
-                                
                         }
                     }
                                 

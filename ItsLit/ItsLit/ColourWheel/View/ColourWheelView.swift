@@ -52,9 +52,9 @@ struct ColourWheelView: View {
                     
                     Button(action: {
                         colorSelected[0].toggle()
-                        colorSelected[1] = false
-                        colorSelected[2] = false
-                        colorSelected[3] = false
+//                        colorSelected[1] = false
+//                        colorSelected[2] = false
+//                        colorSelected[3] = false
 
                         if !colorSelected[0] {
                             pallet[0] = Color(red: Double(rgbColour.r), green: Double(rgbColour.g), blue: Double(rgbColour.b))
@@ -62,6 +62,7 @@ struct ColourWheelView: View {
                             rgbColour.r = CGFloat(pallet[0].cgColor!.components![0])
                             rgbColour.g = CGFloat(pallet[0].cgColor!.components![1])
                             rgbColour.b = CGFloat(pallet[0].cgColor!.components![2])
+                            brightness = CGFloat(pallet[0].cgColor!.components![3])
                         }
                     }) {
                         if colorSelected[0] {
@@ -98,9 +99,9 @@ struct ColourWheelView: View {
                     
                 Button(action: {
                     colorSelected[1].toggle()
-                    colorSelected[0] = false
-                    colorSelected[2] = false
-                    colorSelected[3] = false
+//                    colorSelected[0] = false
+//                    colorSelected[2] = false
+//                    colorSelected[3] = false
                     if !colorSelected[1] {
                         pallet[1] = Color(red: Double(rgbColour.r), green: Double(rgbColour.g), blue: Double(rgbColour.b))
                     } else {
@@ -143,9 +144,9 @@ struct ColourWheelView: View {
 
                 Button(action: {
                     colorSelected[2].toggle()
-                    colorSelected[1] = false
-                    colorSelected[0] = false
-                    colorSelected[3] = false
+//                    colorSelected[1] = false
+//                    colorSelected[0] = false
+//                    colorSelected[3] = false
                     if !colorSelected[2] {
                         pallet[2] = Color(red: Double(rgbColour.r), green: Double(rgbColour.g), blue: Double(rgbColour.b))
                     } else {
@@ -188,9 +189,9 @@ struct ColourWheelView: View {
                 
                 Button(action: {
                     colorSelected[3].toggle()
-                    colorSelected[1] = false
-                    colorSelected[2] = false
-                    colorSelected[0] = false
+//                    colorSelected[1] = false
+//                    colorSelected[2] = false
+//                    colorSelected[0] = false
                     if !colorSelected[3] {
                         pallet[3] = Color(red: Double(rgbColour.r), green: Double(rgbColour.g), blue: Double(rgbColour.b))
                     } else {
