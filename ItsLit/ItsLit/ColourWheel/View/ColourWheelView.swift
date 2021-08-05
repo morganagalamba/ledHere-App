@@ -48,147 +48,137 @@ struct ColourWheelView: View {
             }.padding(.top,10)
             /// The slider shows the selected colour and allows control of the brightness/value. Cannot have value at 0 otherwise we lose the RGB value.
             HStack(alignment: .bottom){
-                VStack{
+
+                    
                     
                     Button(action: {
                         colorSelected[0].toggle()
-                        
                     }) {
                         if colorSelected[0] {
-                            Image(systemName: "largecircle.fill.circle")
+                            ZStack{
+                                Circle()
+                                    .fill(Color("background"))
+                                    .frame(width: 65, height: 65)
+                                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                                Circle()
+                                    .fill(pallet[0])
+                                    .frame(width: 40, height: 40)
+                                    
+                            }
                         }
                         else{
-                            Image(systemName: "circle")
-                        }
-                        
-                    }
-                    
-                    Button(action: {
-                        for i in 0 ... 3{
-                            if checkStatus[i] {
-                                ledsColor[i] = pallet[0]
+                            ZStack{
+                                Circle()
+                                    .fill(Color("background"))
+                                    .frame(width: 50, height: 50)
+                                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                                Circle()
+                                    .fill(pallet[0])
+                                    .frame(width: 35, height: 35)
+                                    
                             }
-                            
-                        }
-                    }) {
-                        ZStack{
-                            Circle()
-                                .fill(Color("background"))
-                                .frame(width: 50, height: 50)
-                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
-                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-                            Circle()
-                                .fill(pallet[0])
-                                .frame(width: 35, height: 35)
-                                
                         }
                         
-                    }
-                }
-                VStack{
+                        
+                    }.padding(.horizontal,5)
+
+                    
                     Button(action: {
                         colorSelected[1].toggle()
-                        
                     }) {
                         if colorSelected[1] {
-                            Image(systemName: "largecircle.fill.circle")
-                        }
-                        else{
-                            Image(systemName: "circle")
-                        }
-                        
-                    }
-                    Button(action: {
-                        for i in 0 ... 3{
-                            if checkStatus[i] {
-                                ledsColor[i] = pallet[1]
+                            ZStack{
+                                Circle()
+                                    .fill(Color("background"))
+                                    .frame(width: 65, height: 65)
+                                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                                Circle()
+                                    .fill(pallet[1])
+                                    .frame(width: 40, height: 40)
+                                    
                             }
                         }
-                    }) {
-                        
-                        ZStack{
-                            Circle()
-                                .fill(Color("background"))
-                                .frame(width: 50, height: 50)
-                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
-                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-                            Circle()
-                                .fill(pallet[1])
-                                .frame(width: 35, height: 35)
-                                
+                        else{
+                            ZStack{
+                                Circle()
+                                    .fill(Color("background"))
+                                    .frame(width: 50, height: 50)
+                                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                                Circle()
+                                    .fill(pallet[1])
+                                    .frame(width: 35, height: 35)
+                                    
+                            }
                         }
-                        
-                    }
-                }
-                VStack{
+  
+                    }.padding(.horizontal,5)
+
+
                     Button(action: {
                         colorSelected[2].toggle()
-                        
                     }) {
                         if colorSelected[2] {
-                            Image(systemName: "largecircle.fill.circle")
-                        }
-                        else{
-                            Image(systemName: "circle")
-                        }
-                        
-                    }
-                    Button(action: {
-                        for i in 0 ... 3{
-                            if checkStatus[i] {
-                                ledsColor[i] = pallet[2]
+                            ZStack{
+                                Circle()
+                                    .fill(Color("background"))
+                                    .frame(width: 65, height: 65)
+                                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                                Circle()
+                                    .fill(pallet[2])
+                                    .frame(width: 50, height: 50)
+                                    
                             }
                         }
-                    }) {
-                        ZStack{
-                            Circle()
-                                .fill(Color("background"))
-                                .frame(width: 50, height: 50)
-                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
-                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-                            Circle()
-                                .fill(pallet[2])
-                                .frame(width: 35, height: 35)
-                                
+                        else{
+                            ZStack{
+                                Circle()
+                                    .fill(Color("background"))
+                                    .frame(width: 50, height: 50)
+                                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                                Circle()
+                                    .fill(pallet[2])
+                                    .frame(width: 35, height: 35)
+                                    
+                            }
                         }
+                       
                         
-                    }
-                }
-                VStack{
+                    }.padding(.horizontal,5)
                     Button(action: {
                         colorSelected[3].toggle()
-                        
-                    }) {
-                        if colorSelected[3] {
-                            Image(systemName: "largecircle.fill.circle")
-                        }
-                        else{
-                            Image(systemName: "circle")
-                        }
-                        
-                    }
-                    Button(action: {
-                        for i in 0 ... 3{
-                            if checkStatus[i] {
-                                ledsColor[i] = pallet[3]
-                            }
-                        }
                     }) {
                         ZStack{
-                            Circle()
-                                .fill(Color("background"))
-                                .frame(width: 50, height: 50)
-                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
-                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-                            Circle()
-                                .fill(pallet[3])
-                                .frame(width: 35, height: 35)
+                            if colorSelected[3] {
+                                Circle()
+                                    .fill(Color("background"))
+                                    .frame(width: 65, height: 65)
+                                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                                Circle()
+                                    .fill(pallet[3])
+                                    .frame(width: 50, height: 50)
+                            }
+                            else{
+                                Circle()
+                                    .fill(Color("background"))
+                                    .frame(width: 50, height: 50)
+                                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                                Circle()
+                                    .fill(pallet[3])
+                                    .frame(width: 35, height: 35)
+                            }
+                            
                                 
                         }
                         
-                    }
-                    
-                }
+                    }.padding(.horizontal,5)
                 
             }.padding(.vertical)
             HStack(alignment: .center) {
@@ -255,6 +245,7 @@ struct ColourWheelView: View {
                 for i in 0 ... 3 {
                     if colorSelected[i] {
                         pallet[i] = Color(red: Double(rgbColour.r), green: Double(rgbColour.g), blue: Double(rgbColour.b))
+                        colorSelected[i] = false
                     }
                 }
             }) {

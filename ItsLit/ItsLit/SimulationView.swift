@@ -25,13 +25,13 @@ struct SimulationView: View {
                         Image(systemName: "square")
                     }*/
                     Circle()
-                        .fill(ledsColor[0])
+                        .fill(pallet[0])
                         .frame(width: 20, height:20)
                     Circle()
-                        .fill(ledsColor[0])
+                        .fill(pallet[0])
                         .frame(width: 20, height: 20)
                     Circle()
-                        .fill(ledsColor[0])
+                        .fill(pallet[0])
                         .frame(width: 20, height: 20)
                     
                 }
@@ -48,13 +48,13 @@ struct SimulationView: View {
                             Image(systemName: "square")
                         }*/
                         Circle()
-                            .fill(ledsColor[1])
+                            .fill(pallet[1])
                             .frame(width: 20, height: 20)
                         Circle()
-                            .fill(ledsColor[1])
+                            .fill(pallet[1])
                             .frame(width: 20, height: 20)
                         Circle()
-                            .fill(ledsColor[1])
+                            .fill(pallet[1])
                             .frame(width: 20, height: 20)
                         
                     }
@@ -64,13 +64,13 @@ struct SimulationView: View {
                 }) {
                     HStack{
                         Circle()
-                            .fill(ledsColor[2])
+                            .fill(pallet[2])
                             .frame(width: 20, height: 20)
                         Circle()
-                            .fill(ledsColor[2])
+                            .fill(pallet[2])
                             .frame(width: 20, height: 20)
                         Circle()
-                            .fill(ledsColor[2])
+                            .fill(pallet[2])
                             .frame(width: 20, height: 20)
                         /*if checkStatus[2] {
                             Image(systemName: "checkmark.square.fill")
