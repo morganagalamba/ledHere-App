@@ -52,17 +52,21 @@ struct ColourWheelView: View {
                     
                     Button(action: {
                         colorSelected[0].toggle()
+                        if !colorSelected[0] {
+                            pallet[0] = Color(red: Double(rgbColour.r), green: Double(rgbColour.g), blue: Double(rgbColour.b))
+                        }
                     }) {
                         if colorSelected[0] {
                             ZStack{
+                                
                                 Circle()
                                     .fill(Color("background"))
-                                    .frame(width: 65, height: 65)
+                                    .frame(width: 50, height: 50)
                                     .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
                                     .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
                                 Circle()
-                                    .fill(pallet[0])
-                                    .frame(width: 40, height: 40)
+                                    .fill(Color.init(red: Double(self.rgbColour.r), green: Double(self.rgbColour.g), blue: Double(self.rgbColour.b)))
+                                    .frame(width: 45, height: 45)
                                     
                             }
                         }
@@ -84,100 +88,118 @@ struct ColourWheelView: View {
                     }.padding(.horizontal,5)
 
                     
-                    Button(action: {
-                        colorSelected[1].toggle()
-                    }) {
-                        if colorSelected[1] {
-                            ZStack{
-                                Circle()
-                                    .fill(Color("background"))
-                                    .frame(width: 65, height: 65)
-                                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
-                                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-                                Circle()
-                                    .fill(pallet[1])
-                                    .frame(width: 40, height: 40)
-                                    
-                            }
-                        }
-                        else{
-                            ZStack{
-                                Circle()
-                                    .fill(Color("background"))
-                                    .frame(width: 50, height: 50)
-                                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
-                                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-                                Circle()
-                                    .fill(pallet[1])
-                                    .frame(width: 35, height: 35)
-                                    
-                            }
-                        }
-  
-                    }.padding(.horizontal,5)
-
-
-                    Button(action: {
-                        colorSelected[2].toggle()
-                    }) {
-                        if colorSelected[2] {
-                            ZStack{
-                                Circle()
-                                    .fill(Color("background"))
-                                    .frame(width: 65, height: 65)
-                                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
-                                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-                                Circle()
-                                    .fill(pallet[2])
-                                    .frame(width: 50, height: 50)
-                                    
-                            }
-                        }
-                        else{
-                            ZStack{
-                                Circle()
-                                    .fill(Color("background"))
-                                    .frame(width: 50, height: 50)
-                                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
-                                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-                                Circle()
-                                    .fill(pallet[2])
-                                    .frame(width: 35, height: 35)
-                                    
-                            }
-                        }
-                       
-                        
-                    }.padding(.horizontal,5)
-                    Button(action: {
-                        colorSelected[3].toggle()
-                    }) {
+                Button(action: {
+                    colorSelected[1].toggle()
+                    if !colorSelected[1] {
+                        pallet[1] = Color(red: Double(rgbColour.r), green: Double(rgbColour.g), blue: Double(rgbColour.b))
+                    }
+                }) {
+                    if colorSelected[1] {
                         ZStack{
-                            if colorSelected[3] {
-                                Circle()
-                                    .fill(Color("background"))
-                                    .frame(width: 65, height: 65)
-                                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
-                                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-                                Circle()
-                                    .fill(pallet[3])
-                                    .frame(width: 50, height: 50)
-                            }
-                            else{
-                                Circle()
-                                    .fill(Color("background"))
-                                    .frame(width: 50, height: 50)
-                                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
-                                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-                                Circle()
-                                    .fill(pallet[3])
-                                    .frame(width: 35, height: 35)
-                            }
                             
-                                
+                            Circle()
+                                .fill(Color("background"))
+                                .frame(width: 50, height: 50)
+                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                            Circle()
+                                .fill(Color.init(red: Double(self.rgbColour.r), green: Double(self.rgbColour.g), blue: Double(self.rgbColour.b)))
+                                .frame(width: 45, height: 45)
+                            
                         }
-                        
-                    }.padding(.horizontal,5)
+                    }
+                    else{
+                        ZStack{
+                            Circle()
+                                .fill(Color("background"))
+                                .frame(width: 50, height: 50)
+                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                            Circle()
+                                .fill(pallet[1])
+                                .frame(width: 35, height: 35)
+                            
+                        }
+                    }
+                    
+                    
+                }.padding(.horizontal,5)
+
+
+                Button(action: {
+                    colorSelected[2].toggle()
+                    if !colorSelected[2] {
+                        pallet[2] = Color(red: Double(rgbColour.r), green: Double(rgbColour.g), blue: Double(rgbColour.b))
+                    }
+                }) {
+                    if colorSelected[2] {
+                        ZStack{
+                            
+                            Circle()
+                                .fill(Color("background"))
+                                .frame(width: 50, height: 50)
+                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                            Circle()
+                                .fill(Color.init(red: Double(self.rgbColour.r), green: Double(self.rgbColour.g), blue: Double(self.rgbColour.b)))
+                                .frame(width: 45, height: 45)
+                            
+                        }
+                    }
+                    else{
+                        ZStack{
+                            Circle()
+                                .fill(Color("background"))
+                                .frame(width: 50, height: 50)
+                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                            Circle()
+                                .fill(pallet[2])
+                                .frame(width: 35, height: 35)
+                            
+                        }
+                    }
+                    
+                    
+                }.padding(.horizontal,5)
+                
+                
+                Button(action: {
+                    colorSelected[3].toggle()
+                    if !colorSelected[3] {
+                        pallet[3] = Color(red: Double(rgbColour.r), green: Double(rgbColour.g), blue: Double(rgbColour.b))
+                    }
+                }) {
+                    if colorSelected[3] {
+                        ZStack{
+                            
+                            Circle()
+                                .fill(Color("background"))
+                                .frame(width: 50, height: 50)
+                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                            Circle()
+                                .fill(Color.init(red: Double(self.rgbColour.r), green: Double(self.rgbColour.g), blue: Double(self.rgbColour.b)))
+                                .frame(width: 45, height: 45)
+                            
+                        }
+                    }
+                    else{
+                        ZStack{
+                            Circle()
+                                .fill(Color("background"))
+                                .frame(width: 50, height: 50)
+                                .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                            Circle()
+                                .fill(pallet[3])
+                                .frame(width: 35, height: 35)
+                            
+                        }
+                    }
+                    
+                    
+                }.padding(.horizontal,5)
                 
             }.padding(.vertical)
             HStack(alignment: .center) {

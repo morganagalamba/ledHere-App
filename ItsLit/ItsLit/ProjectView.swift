@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ProjectView: View {
-    
     @Binding var showPopover: Bool
     @Binding var pallet: [Color]
     @Binding var checkStatus: [Bool]
