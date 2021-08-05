@@ -291,22 +291,22 @@ struct ColourWheelView: View {
                     .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
                     .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
                 }
-            Button(action: {
-                for i in 0 ... 3 {
-                    if colorSelected[i] {
-                        pallet[i] = Color(red: Double(rgbColour.r), green: Double(rgbColour.g), blue: Double(rgbColour.b))
-                        colorSelected[i] = false
-                    }
-                }
-            }) {
-                Text("Salvar")
-                    .frame(width: 100, height: 50)
-                    .foregroundColor(.gray)
-                    .background(Color("background"))
-                    .cornerRadius(8)
-                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
-                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-            }.padding(.vertical)
+//            Button(action: {
+//                for i in 0 ... 3 {
+//                    if colorSelected[i] {
+//                        pallet[i] = Color(red: Double(rgbColour.r), green: Double(rgbColour.g), blue: Double(rgbColour.b))
+//                        colorSelected[i] = false
+//                    }
+//                }
+//            }) {
+//                Text("Salvar")
+//                    .frame(width: 100, height: 50)
+//                    .foregroundColor(.gray)
+//                    .background(Color("background"))
+//                    .cornerRadius(8)
+//                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+//                    .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+//            }.padding(.vertical)
         }//.frame(width: 267.0, height: 475.0)
     }
 }
