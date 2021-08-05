@@ -20,7 +20,6 @@ struct ColourWheelView: View {
     @State private var colorSelected: [Bool] = [false,false,false,false]
     @Binding var pallet: [Color]
     @Binding var checkStatus: [Bool]
-    @Binding var ledsColor: [Color]
     
     
     var body: some View {

@@ -11,14 +11,13 @@ struct ControlColorView: View {
     @Binding var showPopover: Bool
     @Binding var pallet: [Color]
     @Binding var checkStatus: [Bool]
-    @Binding var ledsColor: [Color]
     @State private var colorSelected: [Bool] = [false,false,false,false]
     @Binding var rgbColour : RGB
     
     var body: some View {
             VStack{
                 
-                ColourWheelView(viewModel: ColourWheelViewModel(), rgbColour: $rgbColour, showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, ledsColor: $ledsColor)
+                ColourWheelView(viewModel: ColourWheelViewModel(), rgbColour: $rgbColour, showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus)
 
             }.padding()
             .background(Color("background"))

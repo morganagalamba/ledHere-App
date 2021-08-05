@@ -11,7 +11,6 @@ struct ProjectView: View {
     
     @Binding var showPopover: Bool
     @Binding var pallet: [Color]
-    @Binding var ledsColor: [Color]
     @Binding var checkStatus: [Bool]
     @Binding var rgbColour : RGB
     @State var scene = UmbrellaComponent(models: [Model(id: 0, name: "Umbrella", modelName: "cena.scn")])
@@ -21,14 +20,14 @@ struct ProjectView: View {
             Color("background")
                 .ignoresSafeArea()
             HStack{
-                SimulationView(pallet: $pallet, ledsColor: $ledsColor, checkStatus: $checkStatus)
+                SimulationView(pallet: $pallet, checkStatus: $checkStatus)
                     .padding()
                 Spacer()
                 ZStack{
                     
                 VStack{
                     ZStack{
-                        ControlColorView(showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, ledsColor: $ledsColor, rgbColour: $rgbColour)
+                        ControlColorView(showPopover: $showPopover, pallet: $pallet, checkStatus: $checkStatus, rgbColour: $rgbColour)
                         if $showPopover.wrappedValue {
                             CreatePaletteView(showPopover: $showPopover, pallet: $pallet, model: CreatePaletteViewModel())
                                 .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)

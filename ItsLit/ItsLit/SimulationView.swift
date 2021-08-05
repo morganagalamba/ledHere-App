@@ -10,7 +10,6 @@ import SwiftUI
 struct SimulationView: View {
     
     @Binding var pallet: [Color]
-    @Binding var ledsColor: [Color]
     @Binding var checkStatus: [Bool] 
     
     var body: some View {
@@ -86,13 +85,13 @@ struct SimulationView: View {
             }) {
                 VStack{
                     Circle()
-                        .fill(ledsColor[3])
+                        .fill(pallet[3])
                         .frame(width: 20, height: 20)
                     Circle()
-                        .fill(ledsColor[3])
+                        .fill(pallet[3])
                         .frame(width: 20, height: 20)
                     Circle()
-                        .fill(ledsColor[3])
+                        .fill(pallet[3])
                         .frame(width: 20, height: 20)
                     /*if checkStatus[3] {
                         Image(systemName: "checkmark.square.fill")
