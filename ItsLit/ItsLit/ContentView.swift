@@ -9,7 +9,7 @@ import SwiftUI
  
 struct ContentView: View {
     @State private var showPopover: Bool = false
-    @State var pallet: [Color] = [Color.red ,Color.blue , Color.pink, Color.green]
+    @State var pallet: [Color] = [Color( red: 1, green: 0, blue: 0, opacity: 1) ,Color(red: 0, green: 0, blue: 1, opacity: 1) , Color(red: 1, green: 0.8, blue: 0.8, opacity: 1), Color(red: 0, green: 1, blue: 0, opacity: 1)]
     @State var checkStatus: [Bool] = [false, false, false, false]
     @State var rgbColour : RGB = RGB(r: 0, g: 1, b: 1)
     
