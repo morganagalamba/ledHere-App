@@ -64,11 +64,13 @@ struct CreatePaletteView: View {
                             }else{
                                 ForEach(0..<4, id: \.self) { row in
                                     Circle()
-                                        .frame(width: 50, height: 50)
-                                        .foregroundColor(Color(red: 12, green: 12, blue: 12, opacity: 0))
-                                    }
+                                        .frame(width: 60, height: 60)
+                                        .foregroundColor(Color("background"))
+                                        .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
+                                        .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                                }
                             }
-                        }//.padding()
+                        }.padding(.top, 30)
                     }
                     //.padding()
                 Button(action: {
@@ -88,7 +90,7 @@ struct CreatePaletteView: View {
                         .font(Font.custom("Poppins-Regular", size: 16))
                     
                     
-                }
+                }.padding(.top, 55)
             }
         }
         .cornerRadius(25.0)
