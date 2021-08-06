@@ -17,20 +17,7 @@ struct CreatePaletteView: View {
             Color("background")
                 .ignoresSafeArea()
             VStack{
-                HStack(){
-                    Spacer()
-                    Button(action: {
-                        self.showPopover = false
-                    }) {
-                        Image(systemName: "xmark")
-                            .font(Font.headline.weight(.bold))
-                            .frame(width: 80, height: 80)
-                            .foregroundColor(.gray)
-                    }
-                    
-                }.padding(.horizontal)
 
-                
                 
                 HStack(alignment: .center){
                     Text("Criar Paleta através da foto")
@@ -39,6 +26,9 @@ struct CreatePaletteView: View {
                     
                 }
                     DragView(model: model)
+                        .clipShape(
+                            RoundedRectangle(cornerRadius: 15)
+                        )
                         .overlay(
                             RoundedRectangle(cornerRadius: 15)
                                 .stroke(Color("background"),
@@ -82,7 +72,7 @@ struct CreatePaletteView: View {
                     }
                     //.padding()
                 Button(action: {
-                    for i in 0 ... 3 {
+                    for i in 0 ..< model.pallete.count  {
                         pallet[i] = Color(model.pallete[i])
                         self.showPopover = false
                     }
@@ -102,6 +92,23 @@ struct CreatePaletteView: View {
             }
         }
         .cornerRadius(25.0)
+        VStack{
+        HStack(){
+            Spacer()
+            Button(action: {
+                self.showPopover = false
+            }) {
+                Image(systemName: "xmark")
+                    .font(Font.headline.weight(.bold))
+                    .frame(width: 80, height: 80)
+                    .foregroundColor(.gray)
+            }
+            
+        }.padding(.horizontal)
+            Spacer()
+
+        }
+        
     }
 }
 

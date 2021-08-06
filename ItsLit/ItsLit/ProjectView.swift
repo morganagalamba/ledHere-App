@@ -42,7 +42,8 @@ struct ProjectView: View {
                                 .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
                         }
                     }
-                                
+                             
+                    if !showPopover{
                     Button(action: {
                         model.send(colors: pallet)
                     }) {
@@ -55,7 +56,7 @@ struct ProjectView: View {
                     .cornerRadius(8)
                     .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
                     .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
-                }.padding()
+                    }}.padding()
             }}.padding(.horizontal,200)
             
         }.scaleEffect( (self.horizontalSizeClass ?? .compact) == .compact ? 1.0 : 1.0 )
