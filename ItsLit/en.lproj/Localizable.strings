@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  ItsLit
+
+  Created by Lucas Silva on 05/08/21.
+  
+*/
+"Enviar" = "Send";
+"Salvar paleta" = "Save Palette";
+"Criar Paleta através da foto" = "Create palette through photo";
+"Solte aqui uma imagem" = "Drop an image here";
