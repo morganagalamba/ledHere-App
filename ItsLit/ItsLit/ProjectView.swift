@@ -7,20 +7,30 @@
 
 import SwiftUI
 
+
 struct ProjectView: View {
     @Binding var showPopover: Bool
     @Binding var pallet: [Color]
     @Binding var checkStatus: [Bool]
     @Binding var rgbColour : RGB
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
+
+    
     var model = ProjectViewModel()
     var body: some View {
         ZStack{
             Color("background")
                 .ignoresSafeArea()
             HStack{
-                SimulationView(pallet: $pallet, checkStatus: $checkStatus)
-                    .padding()
-                Spacer()
+                
+                if self.horizontalSizeClass != .compact {
+                    SimulationView(pallet: $pallet, checkStatus: $checkStatus)
+                        .padding()
+                    Spacer()
+                    
+                }
+
                 ZStack{
                     
                 VStack{
@@ -47,7 +57,8 @@ struct ProjectView: View {
                 }.padding()
             }}.padding(.horizontal,200)
             
-        }//.background(Color(UIColor.systemGray5))
+        }.scaleEffect( (self.horizontalSizeClass ?? .compact) == .compact ? 1.0 : 1.0 )
+        //.background(Color(UIColor.systemGray5))
         //.animation(.easeInOut)
     }
 }
