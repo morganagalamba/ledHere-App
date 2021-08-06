@@ -47,6 +47,7 @@ struct ProjectView: View {
                         model.send(colors: pallet)
                     }) {
                             Text("Enviar")
+                                .font(Font.custom("Poppins-Regular", size: 18))
                     }
                     .frame(width: 100, height: 50)
                     .foregroundColor(.gray)

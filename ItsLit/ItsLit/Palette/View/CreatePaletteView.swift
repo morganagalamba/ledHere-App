@@ -34,7 +34,7 @@ struct CreatePaletteView: View {
                 
                 HStack(alignment: .center){
                     Text("Criar Paleta através da foto")
-                        .font(.title3)
+                        .font(Font.custom("Poppins-Regular", size: 18))
                         .foregroundColor(.gray)
                     
                 }
@@ -95,6 +95,8 @@ struct CreatePaletteView: View {
                         .cornerRadius(8)
                         .shadow(color: Color.black.opacity(0.1), radius: 5, x: 4 , y: 4)
                         .shadow(color: Color.white.opacity(0.7), radius: 5, x: -4, y: -4)
+                        .font(Font.custom("Poppins-Regular", size: 16))
+                    
                     
                 }
             }

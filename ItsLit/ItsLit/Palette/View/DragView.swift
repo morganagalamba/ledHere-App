@@ -27,6 +27,7 @@ struct DragView: View {
                 Image(systemName: "photo")
                     .font(.title)
                 Text("Solte aqui uma imagem")
+                    .font(Font.custom("Poppins-Regular", size: 18))
                    
             } .foregroundColor(.gray)
           

@@ -7,5 +7,5 @@
 */
 "Enviar" = "Send";
 "Salvar paleta" = "Save Palette";
-"Criar Paleta através da foto" = "Create palette through photo";
-"Solte aqui uma imagem" = "Drop an image here";
+"Criar Paleta através da foto" = "Create palette from photo ";
+"Solte aqui uma imagem" = "Drop image here";
