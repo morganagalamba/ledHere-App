@@ -12,7 +12,7 @@ struct ProjectView: View {
     @Binding var pallet: [Color]
     @Binding var checkStatus: [Bool]
     @Binding var rgbColour : RGB
-    
+    var model = ProjectViewModel()
     var body: some View {
         ZStack{
             Color("background")
@@ -34,7 +34,7 @@ struct ProjectView: View {
                     }
                                 
                     Button(action: {
-                        
+                        model.send(colors: pallet)
                     }) {
                             Text("Enviar")
                     }

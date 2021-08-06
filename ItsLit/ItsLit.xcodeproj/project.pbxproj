@@ -16,11 +16,11 @@
 		0E48E7012696510B0009ADE4 /* ColourStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48E6FF2696510B0009ADE4 /* ColourStructs.swift */; };
 		0E48E7022696510B0009ADE4 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E48E7002696510B0009ADE4 /* Helpers.swift */; };
 		0EA0974B26B1EA8000DE5BBC /* led.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 0EA0974926B1EA8000DE5BBC /* led.usdc */; };
-		0EA0975426BC97C000DE5BBC /* umbrella.usdc in Resources */ = {isa = PBXBuildFile; fileRef = 0EA0975326BC97C000DE5BBC /* umbrella.usdc */; };
 		75D4336F73D3C55C0E368DC5 /* Pods_ItsLitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7DB310240E32DEEB18FEB2 /* Pods_ItsLitTests.framework */; };
 		7923108EF1E37CA256A32713 /* Pods_ItsLit_ItsLitUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C408B2ED46E5CBDA9BE163B /* Pods_ItsLit_ItsLitUITests.framework */; };
 		CB08689426A8A83100D81232 /* LightsSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB08689326A8A83100D81232 /* LightsSetup.swift */; };
 		CB5C737F26A76A20000DD8D7 /* CreatePaletteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C737E26A76A20000DD8D7 /* CreatePaletteViewModel.swift */; };
+		CB6B74EB26BCB2D800403DB0 /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6B74EA26BCB2D800403DB0 /* ProjectViewModel.swift */; };
 		D72DF7D9269E0CB4008E19AF /* DragView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72DF7D8269E0CB4008E19AF /* DragView.swift */; };
 		D7D527BA26A7434E0053918E /* CreatePaletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D527B926A7434E0053918E /* CreatePaletteView.swift */; };
 		D7D527BC26A74E290053918E /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7D527BB26A74E290053918E /* ProjectView.swift */; };
@@ -63,7 +63,6 @@
 		0E48E6FF2696510B0009ADE4 /* ColourStructs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColourStructs.swift; sourceTree = "<group>"; };
 		0E48E7002696510B0009ADE4 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		0EA0974926B1EA8000DE5BBC /* led.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; path = led.usdc; sourceTree = "<group>"; };
-		0EA0975326BC97C000DE5BBC /* umbrella.usdc */ = {isa = PBXFileReference; lastKnownFileType = file; name = umbrella.usdc; path = ../../../../../../Downloads/umbrella.usdc; sourceTree = "<group>"; };
 		1F537AA2C07D196574500732 /* Pods-ItsLit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItsLit.debug.xcconfig"; path = "Target Support Files/Pods-ItsLit/Pods-ItsLit.debug.xcconfig"; sourceTree = "<group>"; };
 		3DB706EA23C606EFDDFCC631 /* Pods-ItsLitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItsLitTests.release.xcconfig"; path = "Target Support Files/Pods-ItsLitTests/Pods-ItsLitTests.release.xcconfig"; sourceTree = "<group>"; };
 		3F10B90E022BE1E43888C427 /* Pods-ItsLit-ItsLitUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItsLit-ItsLitUITests.debug.xcconfig"; path = "Target Support Files/Pods-ItsLit-ItsLitUITests/Pods-ItsLit-ItsLitUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +74,7 @@
 		B58475638338315E6F12465E /* Pods-ItsLit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ItsLit.release.xcconfig"; path = "Target Support Files/Pods-ItsLit/Pods-ItsLit.release.xcconfig"; sourceTree = "<group>"; };
 		CB08689326A8A83100D81232 /* LightsSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightsSetup.swift; sourceTree = "<group>"; };
 		CB5C737E26A76A20000DD8D7 /* CreatePaletteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreatePaletteViewModel.swift; sourceTree = "<group>"; };
+		CB6B74EA26BCB2D800403DB0 /* ProjectViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		D72DF7D8269E0CB4008E19AF /* DragView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragView.swift; sourceTree = "<group>"; };
 		D7D527B926A7434E0053918E /* CreatePaletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePaletteView.swift; sourceTree = "<group>"; };
 		D7D527BB26A74E290053918E /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
@@ -172,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				0EA0974926B1EA8000DE5BBC /* led.usdc */,
-				0EA0975326BC97C000DE5BBC /* umbrella.usdc */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -261,6 +260,7 @@
 				D7D527C126A76A910053918E /* EffectsView.swift */,
 				D7D527BF26A759E60053918E /* ControlColorView.swift */,
 				D7D527BD26A7512F0053918E /* SimulationView.swift */,
+				CB6B74EA26BCB2D800403DB0 /* ProjectViewModel.swift */,
 				D7F079492694F79E00ED8553 /* Assets.xcassets */,
 				0E48E6FE269651000009ADE4 /* Helpers */,
 				D7F0794E2694F79E00ED8553 /* Info.plist */,
@@ -406,7 +406,6 @@
 			files = (
 				0EA0974B26B1EA8000DE5BBC /* led.usdc in Resources */,
 				D7F0794D2694F79E00ED8553 /* Preview Assets.xcassets in Resources */,
-				0EA0975426BC97C000DE5BBC /* umbrella.usdc in Resources */,
 				D7F0794A2694F79E00ED8553 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -550,6 +549,7 @@
 				0E478B2526989691005F54EA /* LEDS.swift in Sources */,
 				D7F079462694F79C00ED8553 /* ItsLitApp.swift in Sources */,
 				D7D527BE26A7512F0053918E /* SimulationView.swift in Sources */,
+				CB6B74EB26BCB2D800403DB0 /* ProjectViewModel.swift in Sources */,
 				CB08689426A8A83100D81232 /* LightsSetup.swift in Sources */,
 				0E48E6FB269650AF0009ADE4 /* CustomSlider.swift in Sources */,
 				D7D527BC26A74E290053918E /* ProjectView.swift in Sources */,
