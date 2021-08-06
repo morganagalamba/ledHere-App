@@ -61,17 +61,17 @@ struct SimulationView: View {
                     }.padding(.trailing, 20)
                 }
                 Button(action: {
-                    checkStatus[2].toggle()
+                    checkStatus[3].toggle()
                 }) {
                     HStack{
                         Circle()
-                            .fill(pallet[2])
+                            .fill(pallet[3])
                             .frame(width: 20, height: 20)
                         Circle()
-                            .fill(pallet[2])
+                            .fill(pallet[3])
                             .frame(width: 20, height: 20)
                         Circle()
-                            .fill(pallet[2])
+                            .fill(pallet[3])
                             .frame(width: 20, height: 20)
                         /*if checkStatus[2] {
                             Image(systemName: "checkmark.square.fill")
@@ -83,17 +83,17 @@ struct SimulationView: View {
                
             }
             Button(action: {
-                checkStatus[3].toggle()
+                checkStatus[2].toggle()
             }) {
                 VStack{
                     Circle()
-                        .fill(pallet[3])
+                        .fill(pallet[2])
                         .frame(width: 20, height: 20)
                     Circle()
-                        .fill(pallet[3])
+                        .fill(pallet[2])
                         .frame(width: 20, height: 20)
                     Circle()
-                        .fill(pallet[3])
+                        .fill(pallet[2])
                         .frame(width: 20, height: 20)
                     /*if checkStatus[3] {
                         Image(systemName: "checkmark.square.fill")
